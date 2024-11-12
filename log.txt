@@ -1,17 +1,18 @@
-2024-11-12 17:39:52 UTC
+2024-11-12 21:43:12 UTC
 macOS-14.6.1-arm64-arm-64bit
 Ren'Py 8.3.2.24090902
 
-Early init took 0.04s
+Early init took 0.05s
 Loading error handling took 0.03s
-Loading script took 0.10s
-Loading save slot metadata took 0.03s
+Loading script took 0.11s
+Loading save slot metadata took 0.04s
 Loading persistent took 0.00s
-Running init code took 0.03s
+Running init code took 0.04s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
 Dump and make backups took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
@@ -21,12 +22,12 @@ Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.03s
 Running _start took 0.00s
 Interface start took 0.25s
 
