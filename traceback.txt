@@ -1,24 +1,66 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 556, in script
-    lab_rec "Hello! How can I assist you today?"
-Exception: Sayer 'lab_rec' is not defined.
+  File "game/script.rpy", line 177, in script
+    call screen inventory_icon_room
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 179, in execute
+    screen inventory_icon_room:
+  File "game/script.rpy", line 179, in execute
+    screen inventory_icon_room:
+  File "game/script.rpy", line 180, in execute
+    if newspaper:
+  File "game/script.rpy", line 180, in <module>
+    if newspaper:
+NameError: name 'newspaper' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 556, in script
-    lab_rec "Hello! How can I assist you today?"
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/ast.py", line 2572, in execute
-    Say.execute(self)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'lab_rec' is not defined.
+  File "game/script.rpy", line 177, in script
+    call screen inventory_icon_room
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1974, in execute
+    self.call("execute")
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/exports/statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Applications/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 179, in execute
+    screen inventory_icon_room:
+  File "game/script.rpy", line 179, in execute
+    screen inventory_icon_room:
+  File "game/script.rpy", line 180, in execute
+    if newspaper:
+  File "game/script.rpy", line 180, in <module>
+    if newspaper:
+NameError: name 'newspaper' is not defined
 
-macOS-10.16-x86_64-i386-64bit x86_64
-Ren'Py 8.3.0.24082114
+macOS-14.6.1-arm64-arm-64bit arm64
+Ren'Py 8.3.2.24090902
 Balancing the flow 1.0
-Tue Nov 12 10:36:51 2024
+Tue Nov 12 12:23:50 2024

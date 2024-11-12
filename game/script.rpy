@@ -22,6 +22,7 @@ default current_room = 'start'
 default fn_status = False
 #inventory variables
 default keys = False
+default newspaper = False
 default fn_counter = False
 default fn_for = False
 default e_counter = False
