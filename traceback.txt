@@ -1,34 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 136, in script
-    call screen inventory_icon_room
-  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-Exception: renpy.restart_interaction() was called 100 times without processing any input.
+  File "game/script.rpy", line 573, in script call
+    "Congratulations! You've selected the correct answers and passed the task."
+  File "game/script.rpy", line 573, in script call
+    "Congratulations! You've selected the correct answers and passed the task."
+ScriptError: could not find label 'yes_checkquiz'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 136, in script
-    call screen inventory_icon_room
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/ast.py", line 1974, in execute
-    self.call("execute")
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/ast.py", line 1953, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/statements.py", line 374, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/exports/statementexports.py", line 345, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/display/core.py", line 2186, in interact
-    raise Exception("renpy.restart_interaction() was called 100 times without processing any input.")
-Exception: renpy.restart_interaction() was called 100 times without processing any input.
+  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/main.py", line 652, in main
+    run(restart)
+  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 573, in script call
+    "Congratulations! You've selected the correct answers and passed the task."
+  File "game/script.rpy", line 573, in script call
+    "Congratulations! You've selected the correct answers and passed the task."
+  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'yes_checkquiz'.
 
 macOS-10.16-x86_64-i386-64bit x86_64
 Ren'Py 8.3.0.24082114
 Balancing the flow 1.0
-Fri Nov  8 22:39:04 2024
+Tue Nov 12 00:22:00 2024

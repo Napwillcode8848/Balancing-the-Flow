@@ -29,6 +29,44 @@ define f_nvl = Character("Steve", kind=nvl, color= "#df059a", callback=Phone_Rec
 define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.3)
 
+#for quiz at the end
+default selected_options = []
+init python:
+    def ToggleSelected(entry):
+        # Add or remove the entry from selected_options
+        if entry in selected_options:
+            selected_options.remove(entry)
+        else:
+            selected_options.append(entry)
+
+    def check_answers_yes():
+        # Define the correct answers for prop
+        correct_answers = [
+            "Here's some important information you might want to keep.",
+            "Another information bla bla"
+        ]
+        # Check if the player's selections match the correct answers
+        if sorted(selected_options) == sorted(correct_answers):
+            renpy.hide_screen("yes_checkquiz")
+            renpy.jump("task_passed")
+        else:
+            renpy.notify("Incorrect selection. Try again.")
+            selected_options.clear()  # Clear selections if incorrect
+
+    def check_answers_no():
+        # Define the correct answers for opp
+        correct_answers = [
+            "Here's some important information you might want to keep.",
+            "Another information bla bla"
+        ]
+        # Check if the player's selections match the correct answers
+        if sorted(selected_options) == sorted(correct_answers):
+            renpy.hide_screen("no_checkquiz")
+            renpy.jump("task_passed")
+        else:
+            renpy.notify("Incorrect selection. Try again.")
+            selected_options.clear()  # Clear selections if incorrect
+
 #function used for zooming image in 
 # how to use it: show image_name at double_size
 transform double_size:
@@ -83,8 +121,6 @@ style journal_entry:
 #             $ renpy.notify("All written down on my journal!")
 #         "Skip.":
 #             pass  # Do nothing if the player chooses not to keep it
-
-
 
 
 # The game starts here.
@@ -288,7 +324,7 @@ label fn_room:
         p "Am I ready to leave this area?"
         menu:
             "Yep!":
-                jump map_en
+                jump map_to_townhall
             "Still something to do.":
                 jump choicesfnstay
     else:
@@ -455,14 +491,96 @@ screen fnr_options:
 
 
 
-
-label map_en:
-    #To change later in the final/beta version
+#TOWNHALL
+label map_to_townhall:
+    $ current_room = 'map'
     scene map_background
-    p "That's everything that alpha has to offer!"
-    p "Merci beaucoup pour jouer notre jeu video! :)"
-    jump end
+    p "Now, it is time for you to vote!"
+    call screen map_tn
+    jump tn_room
 
+screen map_tn:
+    #neighborhood
+    imagebutton:
+        align(0.780, 0.732)
+        idle "map_townhall.png"
+        hover "map_townhall_hover.png"
+        action Jump("tn_room")
+
+label tn_room:
+    scene bk_townhall
+    p "Alight! I think it is time to show my standign point."
+    p "Let me check my note again..."
+    show screen voting_buttons
+
+screen voting_buttons:
+    add "bk_townhall.png"
+    imagebutton:
+        #YES: for the dam
+        align(0.25, 0.5)
+        idle "back_button.png"
+        hover "back_button_hover.png"
+        action Show("yes_checkquiz") 
+
+    imagebutton:
+        #NO: against the dam
+        align(0.75, 0.5)
+        idle "back_button.png"
+        hover "back_button_hover.png"
+        action Show("no_checkquiz") 
+
+screen yes_checkquiz:
+    add "bk_townhall.png"
+
+    # Create a frame
+    frame:
+        xsize 500 
+        ysize 600
+        xalign 0.5 
+        yalign 0.5 
+        
+        # Display the "My Journal" text at the center of the frame
+        text "My Journal" at center 
+        
+        vbox:
+            xalign 0.5
+            yalign 0.5
+            spacing 10  # Space between buttons
+            
+            # Loop through journal entries and display each as a textbutton
+            for entry in journal_entries:
+                textbutton entry action [Function(ToggleSelected, entry)]
+            
+            # Button to check answers
+            textbutton "Check Answers" action [Function(check_answers_yes)]
+
+screen no_checkquiz:
+    add "bk_townhall.png"
+
+    # Create a frame
+    frame:
+        xsize 500 
+        ysize 600
+        xalign 0.5 
+        yalign 0.5 
+        
+        # Display the "My Journal" text at the center of the frame
+        text "My Journal" at center 
+        
+        vbox:
+            xalign 0.5
+            yalign 0.5
+            spacing 10  # Space between buttons
+            
+            # Loop through journal entries and display each as a textbutton
+            for entry in journal_entries:
+                textbutton entry action [Function(ToggleSelected, entry)]
+            
+            # Button to check answers
+            textbutton "Check Answers" action [Function(check_answers_no)]
+
+label task_passed:
+    p "Congratulations! You've selected the correct answers and passed the task."
 
 label end:
     return
