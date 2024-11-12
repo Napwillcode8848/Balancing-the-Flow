@@ -2,10 +2,17 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
 define p = Character("You", color= "#df059a")
 define tv = Character("Television")
 define f = Character("Friend", color= "#7605df")
+define fna = Character("Elder", color="#12a683")
+define fnf = Character("Community Member", color="#54cd03")
+define s = Character("office receptionist", color="#0050df")
+define np = Character("council leader", color="#00bfae")
+define pol = Character("politician", color="#00ccff")
+define lab_rec = Character("lab_rec", color="#ff0062")
+define efor = Character("efor", color="#80ff37")
+ 
 
 #This will contain all variables
 default bedroom_status = False
@@ -42,7 +49,6 @@ init python:
     def check_answers_yes():
         # Define the correct answers for prop
         correct_answers = [
-            "Here's some important information you might want to keep.",
             "Another information bla bla"
         ]
         # Check if the player's selections match the correct answers
@@ -50,13 +56,12 @@ init python:
             renpy.hide_screen("yes_checkquiz")
             renpy.jump("task_passed")
         else:
-            renpy.notify("Incorrect selection. Try again.")
+            renpy.notify("Incorrect or incomplete selection. Try again.")
             selected_options.clear()  # Clear selections if incorrect
 
     def check_answers_no():
         # Define the correct answers for opp
         correct_answers = [
-            "Here's some important information you might want to keep.",
             "Another information bla bla"
         ]
         # Check if the player's selections match the correct answers
@@ -64,7 +69,7 @@ init python:
             renpy.hide_screen("no_checkquiz")
             renpy.jump("task_passed")
         else:
-            renpy.notify("Incorrect selection. Try again.")
+            renpy.notify("Incorrect or incomplete selection. Try again.")
             selected_options.clear()  # Clear selections if incorrect
 
 #function used for zooming image in 
@@ -324,7 +329,7 @@ label fn_room:
         p "Am I ready to leave this area?"
         menu:
             "Yep!":
-                jump map_to_townhall
+                jump map_en
             "Still something to do.":
                 jump choicesfnstay
     else:
@@ -458,19 +463,60 @@ label fnr:
     scene fn_bkr
     $ current_room = "fnr"
     if been_fnr:
-        call screen fnr_options
+        scene fn_bkr
+        p "Is there anything else I need to discuss with the community members here?"
+        menu:
+            "Yes, let's continue the conversation.":
+                jump fnr_dialogue
+            "No, I think I'm done here.":
+                jump fn_room
     else:
-        show fnafor
-        #add dialogue later
-        fnf "Oh, hello there! How can I help you?"
-        p "The rest of this section is a WIP!"
-        if been_fnl:
-            p "Since you've been to the left area, feel free to leave the neighborhood for the ending message :)"
-            call screen fnr_options
-        else:
-            p "How about you check out the left area?"
-            call screen fnr_options
+        scene fn_bkr
+        $ been_fnr = True
+        show fnafor 
+        fnf "Excuse me."
+        p "Yes?"
+        fnf "I couldn’t help but overhear you speaking with other members of our community."
+        fnf "I would like to provide my perspective, if you have some spare time."
+        p "Yes, I would love to hear your opinion."
+        p "What do you think about the construction of a new dam?"
 
+label fnr_opinion_differs:
+    fnf "Well, I have the right to my own opinion, don’t I?"
+    p "Yes, of course. Please, tell me more about why you support it."
+
+label fnr_support_reason:
+    fnf "Building the dam will provide jobs to our people and contracts to First Nation developers."
+    fnf "This could really benefit our community economically."
+
+    menu:
+        "That’s something I hadn’t considered. Would you mind if I noted this down?":
+            # Add dialogue to journal
+            $ add_to_journal("Community Member's perspective: The dam could bring economic benefits to the First Nation community.")
+            $ renpy.notify("Added to journal!")
+            jump fnr_environment
+
+        "I see. What about the environmental impact?":
+            jump fnr_environment
+
+label fnr_environment:
+    p "Isn’t diesel fuel harmful to the environment?"
+    fnf "Oh, absolutely. And spills can contaminate large amounts of water."
+    p "Thank you for sharing that perspective with me."
+
+    menu:
+        "Take a note on the environmental impact of diesel fuel and the dam.":
+            $ add_to_journal("Diesel fuel spills can harm water sources. The dam could reduce reliance on diesel for power.")
+            $ renpy.notify("Added to journal!")
+        "Skip taking notes.":
+            pass  # Do nothing if player chooses not to keep it
+
+    fnf "Thank you for taking the time to listen to me. Have a good day!"
+    p "You too, goodbye."
+
+    # End conversation, return to options
+    hide fnafor 
+    call screen fnr_options
 
 screen fnr_options:
     #left option
@@ -489,9 +535,153 @@ screen fnr_options:
         hover "folder_hover.png"
         action Jump("inventory_room")
 
+#MAP_EN
+label map_en:
+    $ current_room = 'map_en'
+    scene map_background
+    p "Right, let's head to the University of Toronto to talk to some experts about the dam."
+    call screen map_lab
+    jump lab_reception
+
+screen map_lab:
+    # University of Toronto lab location
+    imagebutton:
+        align(0.240, 0.730)
+        idle "map_lab.png"
+        hover "map_lab_hover.png"
+        action Jump("lab_reception")
+
+label lab_reception:
+    $ current_room = 'lab_reception'
+    scene backgroundlabfront
+    show lab_rec with dissolve
+    p "I head to the front desk at the University of Toronto's environmental science department."
+    p "I need to talk to someone about the dam, but I don't know who to start with."
+
+    lab_rec "Hello! How can I assist you today?"
+
+    p "Hi, I’m looking to speak with a professor regarding the environmental impact of a dam project. Is anyone available?"
+
+    lab_rec "Well, Professor Green is in a lecture at the moment. However, Professor Swift might be available to talk about environmental policies and projects."
+
+    p "Thank you! I'll speak with Professor Swift then."
+    jump lab_professor_swift
+
+label lab_professor_swift:
+    $ current_room = 'lab_professor_swift'
+    scene backgroundlab1
+    show efor with dissolve
+    p "I knock on Professor Swift's door and enter. She's sitting at her desk surrounded by research papers."
+    
+    efor "Ah, welcome! How can I help you today?"
+
+    p "Hi, I'm doing research on whether dams are good for environment or not. I was hoping to get your perspective on the environmental impact of a proposed dam. Do you think it's a good idea to build it?"
+
+    efor "Ah, the dam project! It's a significant issue. Well, in terms of the environment, building a dam can have some long-term benefits."
+    efor "It provides renewable energy and helps with flood control, especially for nearby communities. Of course, there are environmental impacts too, such as potential loss of biodiversity in the river."
+
+    p "So, you're suggesting the dam could be beneficial in some ways?"
+
+    efor "Yes, exactly. The energy it generates could help reduce carbon emissions, and flood control can protect areas prone to natural disasters. However, we also need to consider how it affects fish populations and aquatic life."
+
+    p "That’s helpful, thank you. I think I’ll add this information to my journal."
+
+    # Option to add journal entry
+    menu:
+        "Add to journal":
+            $ add_to_journal("Professor Swift explains the potential benefits of the dam, including renewable energy generation and flood control, but also highlights environmental concerns like biodiversity loss.")
+            p "I’ll make sure to write this down for reference."
+        "Don’t add to journal":
+            p "I’ll just remember this for now."
+    
+    p "Thank you for your time, Professor Swift. I’ll head back to the reception desk to check if Professor Green is available yet."
+
+    # show arrow_left
+    jump lab_reception2
+
+label lab_reception2:
+    $ current_room = 'lab_reception'
+    scene backgroundlabfront
+    show lab_rec with dissolve
+    p "I return to the front desk, hoping to catch Professor Green now that her lecture has finished."
+
+    lab_rec "Ah, you're back! Unfortunately, it might still take a little while for Professor Green to finish. However, I just received a call from Steve."
+
+    play sound "audio/phone_buzz.mp3"
+    f_nvl "Yo! Where are you? The politician is really interested in the dam project and is having a press conference in his office right now."
+
+    p_nvl "The politician? I’ll have to check that out, thanks for the heads-up."
+
+    lab_rec "I’ll let you know when Professor Green is ready to meet."
+
+    jump politician_call
+
+label politician_call:
+    $ current_room = 'politician_call'
+    p "I quickly get in touch with Steve, and he tells me that the politician is attending a press conference at his office. It sounds like the politician is really pushing for the dam’s construction."
+
+    f_nvl "I think you should meet him, he might have more information about the dam’s support from the political side."
+
+    p_nvl "Got it, I’ll go talk to him."
+    jump lab_reception3
+
+label lab_reception3:
+    $ current_room = 'lab_reception'
+    scene backgroundlabfront
+    show lab_rec with dissolve
+    lab_rec "Ah, finally! Professor Green is available now. You can speak with her about the dam's impact."
+    jump lab_professor_green
+
+label lab_professor_green:
+    $ current_room = 'lab_professor_green'
+    scene backgroundlab2 with dissolve
+    show efor at left with fade
+    p "I enter Professor Green’s office, and she looks up from her work."
+
+    s "Oh, hello! I’m Professor Sage. I understand you want to discuss the potential impacts of a hydro-electric dam on the Una River?"
+
+    p "Yes, I’d like to hear your thoughts on the downsides."
+
+    s "Certainly. Hydro-electric dams have significant environmental costs. They flood large areas of land, disrupting ecosystems and displacing wildlife."
+
+    menu:
+        "Ask about habitat disruption":
+            p "How do dams disrupt habitats?"
+
+            s "When land is flooded, entire ecosystems are submerged. Fish, plants, and animals lose their natural habitats."
+            s "This can lead to a loss in biodiversity, harming species that rely on the natural river environment."
+
+            p "That sounds serious – I hadn’t thought about it that way."
+
+        "Ask about pollution concerns":
+            p "Do hydro-electric dams contribute to pollution?"
+
+            s "Yes, indirectly. When organic material like plants decays underwater, it releases methane, a potent greenhouse gas."
+            s "Methane contributes to global warming, sometimes even more than carbon dioxide."
+
+            p "That’s unexpected. I thought hydro-electric power was cleaner."
+
+            s "Cleaner, yes, but not without environmental consequences."
+
+    # Continue the conversation
+    p "It seems like there’s a lot to consider. Do you believe the cons outweigh the pros?"
+
+    s "In many cases, yes. There are less invasive alternatives, like wind and solar, that don’t involve flooding or habitat loss."
+    s "While dams provide energy, the cost to our ecosystems can be too high."
+
+    menu:
+        "Add to journal":
+            $ add_to_journal("Professor Sage shared concerns about habitat destruction, methane emissions, and biodiversity loss due to hydro-electric dams.")
+            p "I’ll jot this down in my journal."
+
+        "Don’t add to journal":
+            p "I’ll keep this in mind for now."
 
 
-#TOWNHALL
+    # show arrow_left
+    jump map_to_townhall
+
+#MAP_TO_TOWNHALL (USE JUMP)
 label map_to_townhall:
     $ current_room = 'map'
     scene map_background
@@ -499,10 +689,11 @@ label map_to_townhall:
     call screen map_tn
     jump tn_room
 
+
 screen map_tn:
     #neighborhood
     imagebutton:
-        align(0.780, 0.732)
+        align(0.780, 0.722)
         idle "map_townhall.png"
         hover "map_townhall_hover.png"
         action Jump("tn_room")
@@ -518,15 +709,15 @@ screen voting_buttons:
     imagebutton:
         #YES: for the dam
         align(0.25, 0.5)
-        idle "back_button.png"
-        hover "back_button_hover.png"
+        idle "yes_vote.png"
+        hover "yes_vote_hover.png"
         action Show("yes_checkquiz") 
 
     imagebutton:
         #NO: against the dam
         align(0.75, 0.5)
-        idle "back_button.png"
-        hover "back_button_hover.png"
+        idle "no_vote.png"
+        hover "no_vote_hover.png"
         action Show("no_checkquiz") 
 
 screen yes_checkquiz:

@@ -1,32 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 573, in script call
-    "Congratulations! You've selected the correct answers and passed the task."
-  File "game/script.rpy", line 573, in script call
-    "Congratulations! You've selected the correct answers and passed the task."
-ScriptError: could not find label 'yes_checkquiz'.
+  File "game/script.rpy", line 556, in script
+    lab_rec "Hello! How can I assist you today?"
+Exception: Sayer 'lab_rec' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/bootstrap.py", line 359, in bootstrap
-    renpy.main.main()
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/main.py", line 652, in main
-    run(restart)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/main.py", line 148, in run
-    renpy.execution.run_context(True)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/execution.py", line 958, in run_context
-    context.run()
-  File "game/script.rpy", line 573, in script call
-    "Congratulations! You've selected the correct answers and passed the task."
-  File "game/script.rpy", line 573, in script call
-    "Congratulations! You've selected the correct answers and passed the task."
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'yes_checkquiz'.
+  File "game/script.rpy", line 556, in script
+    lab_rec "Hello! How can I assist you today?"
+  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/ast.py", line 2572, in execute
+    Say.execute(self)
+  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/ast.py", line 575, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/ast.py", line 464, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'lab_rec' is not defined.
 
 macOS-10.16-x86_64-i386-64bit x86_64
 Ren'Py 8.3.0.24082114
 Balancing the flow 1.0
-Tue Nov 12 00:22:00 2024
+Tue Nov 12 10:36:51 2024
