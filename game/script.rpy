@@ -1,4 +1,7 @@
-﻿#SET CHARACTERS
+﻿#testing
+
+
+#SET CHARACTERS
 define p = Character("You", color= "#df059a")
 define tv = Character("Television")
 define f = Character("Friend", color= "#7605df")
