@@ -2,13 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 536: expected statement.
-    window:
-          ^
+File "game/script.rpy", line 811: the bold keyword argument was not given a value.
+    text "My Journal" size 30 xalign 0.5 color "#FF5733" bold = True
+                                                              ^
 
-File "game/script.rpy", line 561: expected statement.
-    window:
-          ^
+File "game/script.rpy", line 834: the bold keyword argument was not given a value.
+    text "My Journal" size 30 xalign 0.5 color "#FF5733" bold = True
+                                                              ^
 
 Ren'Py Version: Ren'Py 8.3.0.24082114
-Tue Nov 12 00:39:05 2024
+Fri Nov 15 00:06:52 2024

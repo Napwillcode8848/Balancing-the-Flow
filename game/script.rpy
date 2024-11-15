@@ -1,58 +1,62 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+﻿#SET CHARACTERS
 define p = Character("You", color= "#df059a")
 define tv = Character("Television")
 define f = Character("Friend", color= "#7605df")
 define fna = Character("Elder", color="#12a683")
 define fnf = Character("Community Member", color="#54cd03")
-define s = Character("office receptionist", color="#0050df")
-define np = Character("council leader", color="#00bfae")
-define pol = Character("politician", color="#00ccff")
-define lab_rec = Character("lab_rec", color="#ff0062")
-define efor = Character("efor", color="#80ff37")
+define s = Character("Rceptionist", color="#0050df")
+define np = Character("Council leader", color="#00bfae")
+define pol = Character("Politician", color="#00ccff")
+define lab_rec = Character("Receptionist", color="#ff0062")
+define efor = Character("Professor", color="#80ff37")
  
 
-#This will contain all variables
+#SET VARIABLES
+#Room variables
 default bedroom_status = False
 default count_drawer_Tfrontdoor = False
 default count_drawer_Tfrontdoor2 = False
 default current_room = 'start'
 default fn_status = False
-#inventory variables
-default keys = False
+#Inventory variables
 default newspaper = False
-default fn_counter = False
-default fn_for = False
-default e_counter = False
-default e_for = False
-default politician = False
-#Define a list variable to store kept dialogues
+# default fn_counter = False
+# default fn_for = False
+# default e_counter = False
+# default e_for = False
+# default politician = False
+#Journal variables
 default journal_entries = []
 default journal_open = False
-#Define for phone system
+#Phone system variables
 define p_nvl = Character("You", kind=nvl, color= "#df059a", callback=Phone_SendSound)
 define f_nvl = Character("Steve", kind=nvl, color= "#df059a", callback=Phone_ReceiveSound)
 define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.3)
-
-#for quiz at the end
+#Checkpoint quiz varibles
 default selected_options = []
-init python:
+
+
+#SET PYTHON FUNCTIONS
+init python: 
+    def add_to_journal(dialogue):
+        # to add dialogue to the journal
+        if dialogue not in journal_entries:
+            renpy.notify("All written down on my journal!")
+            journal_entries.append(dialogue)
+
     def ToggleSelected(entry):
         # Add or remove the entry from selected_options
         if entry in selected_options:
             selected_options.remove(entry)
         else:
             selected_options.append(entry)
-
+    
     def check_answers_yes():
-        # Define the correct answers for prop
+        # All correct points for proposition
         correct_answers = [
             "Another information bla bla"
         ]
-        # Check if the player's selections match the correct answers
         if sorted(selected_options) == sorted(correct_answers):
             renpy.hide_screen("yes_checkquiz")
             renpy.jump("task_passed")
@@ -61,34 +65,31 @@ init python:
             selected_options.clear()  # Clear selections if incorrect
 
     def check_answers_no():
-        # Define the correct answers for opp
+        # All correct points for opposition
         correct_answers = [
             "Another information bla bla"
         ]
-        # Check if the player's selections match the correct answers
         if sorted(selected_options) == sorted(correct_answers):
             renpy.hide_screen("no_checkquiz")
             renpy.jump("task_passed")
         else:
             renpy.notify("Incorrect or incomplete selection. Try again.")
             selected_options.clear()  # Clear selections if incorrect
-
-#function used for zooming image in 
-# how to use it: show image_name at double_size
+#ZOOMING IMAGE
 transform double_size:
+    # how to use it: show image_name at double_size
     zoom 1.5
+transform half_size:
+    # how to use it: show image_name at double_size
+    zoom 0.5
 
-#Create a function to add dialogue to the journal
-init python:
-    def add_to_journal(dialogue):
-        if dialogue not in journal_entries:
-            journal_entries.append(dialogue)
 
-#Define the screen for the journal
+#SET SCREENS / LABELS
+#Journal screen
 screen journal():
     if journal_open:
         frame:
-            align (0.0, 0.2)  # Align the journal to the right side of the screen
+            align (0.0, 0.2) 
             xpadding 10
             ypadding 10
             xsize 400
@@ -96,21 +97,47 @@ screen journal():
 
             viewport:
                 draggable True
-                scrollbars "vertical" #Add a vertical scroll bar
+                scrollbars "vertical" 
 
                 vbox:
                     add "journal_open.png"  xpos 0.5 xanchor 0.5 #Journal icon
-                    text "Journal" xalign 0.5 bold True size 20# Title for the journal
+                    text "Journal" xalign 0.5 bold True size 20 # Title for the journal
                     for entry in journal_entries:
                         text "✅  " + entry style "journal_entry"
-# Define the screen for the journal toggle button
+#Journal toggle button screen
 screen journal_toggle_button():
     imagebutton:
         action ToggleVariable("journal_open", True, False)
         idle "journal_main.png"
         hover "journal_hover.png"
         align (0.0, 0.0)
-#Styles for journal entry
+#Inventory system
+label inventory_room:
+    scene inventory_background
+    #THESE NEED TO BE ADDED IN INSTANCE
+    #$ newspaper = True
+    call screen inventory_icon_room
+screen inventory_icon_room:
+    if newspaper:
+        imagebutton:
+            xanchor 0.5
+            yanchor 0.5
+            xpos 0.75
+            ypos 0.6835
+            idle "paper.png"
+            hover "paper_hover.png"
+    imagebutton:
+        xanchor 0.5
+        yanchor 0.5
+        xpos 0.5
+        ypos 0.9
+        idle "back_button.png"
+        hover "back_button_hover.png"
+        action Jump(current_room)
+
+
+#SET STYLES
+#Journal entry style
 style journal_entry:
     color "#E0E0E0"
     xpadding 10
@@ -118,18 +145,19 @@ style journal_entry:
     left_margin 10
     top_margin 5
     bottom_margin 30 
+
+
 #How to use journal system
 # menu:
 #         e "Here's some important information you might want to keep."
 #         "Take a note.":
 #             # Add the dialogue to the journal
 #             $ add_to_journal("Another information bla bla")
-#             $ renpy.notify("All written down on my journal!")
 #         "Skip.":
 #             pass  # Do nothing if the player chooses not to keep it
 
 
-# The game starts here.
+#START HERE
 label start:
 
     show screen journal_toggle_button
@@ -165,117 +193,10 @@ label start:
         p "My phone? Who could be calling at this time?"
         jump phone_talking
 
-#Inventory system
-label inventory_room:
-    scene inventory_background
-    #THESE NEED TO BE ADDED IN INSTANCE
-    #$newspaper = True
-    #$ fn_counter = True
-    #$ fn_for = True
-    #$ e_counter = True
-    #$ e_for = True
-    #$ politician = True
-    call screen inventory_icon_room
-
-screen inventory_icon_room:
-    if newspaper:
-        imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.75
-            ypos 0.6835
-            idle "paper.png"
-            hover "paper_hover.png"
-
-    if fn_counter:
-        imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.25
-            ypos 0.25
-            idle "evidence5.png"
-            hover "evidence5_hover.png"
-
-    if fn_for:
-        imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.25
-            idle "evidence4.png"
-            hover "evidence4_hover.png"
-
-    if e_counter:
-        imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.75
-            ypos 0.25
-            idle "evidence3.png"
-            hover "evidence3_hover.png"
-
-    if e_for:
-        imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.25
-            ypos 0.683
-            idle "evidence2.png"
-            hover "evidence2_hover.png"
-
-    if politician:
-        imagebutton:
-            xanchor 0.5
-            yanchor 0.5
-            xpos 0.5
-            ypos 0.683
-            idle "evidence1.png"
-            hover "evidence1_hover.png"
-
-    imagebutton:
-        xanchor 0.5
-        yanchor 0.5
-        xpos 0.5
-        ypos 0.9
-        idle "back_button.png"
-        hover "back_button_hover.png"
-        action Jump(current_room)
-        
-screen bd_press:
-    #door
-    imagebutton:
-        align(0.85, 0.36)
-        idle "door.png"
-        hover "door_hover.png"
-        action Jump("map")
-    
-    #image_frame
-    imagebutton:
-        align(0.47, 0.60)
-        idle "image_frame.png"
-        hover "image_frame_hover.png"
-
-    #newspaper
-    imagebutton:
-        align(0.20, 0.72)
-        idle "paper.png"
-        hover "paper_hover.png"
-        action SetVariable("newspaper", True)
-
-    #folder
-    imagebutton:
-        align (0.0, 1.0) 
-        idle "folder_main.png"
-        hover "folder_hover.png"
-        action Jump("inventory_room")
-
-
-#Phone talking screeen
 label phone_talking:
     scene bk_t_bedroom 
     
     #Phone conversation starts here
-    
     nvl_narrator "(⁄ ⁄•⁄ω⁄•⁄ ⁄)   (´｡• ᵕ •｡`) ♡"
     play sound "audio/ReceiveText.ogg"
     f_nvl "Yo! Did you see what was on the TV?"
@@ -304,10 +225,35 @@ label phone_talking:
     p "Alright! No more talking. Let's go exploring!!"
     $ bedroom_status = True
     call screen bd_press
+   
+screen bd_press:
+    #door
+    imagebutton:
+        align(0.85, 0.36)
+        idle "door.png"
+        hover "door_hover.png"
+        action Jump("map_fn")
+    #image_frame
+    imagebutton:
+        align(0.47, 0.60)
+        idle "image_frame.png"
+        hover "image_frame_hover.png"
+    #newspaper
+    imagebutton:
+        align(0.20, 0.72)
+        idle "paper.png"
+        hover "paper_hover.png"
+        action SetVariable("newspaper", True)
+    #folder
+    imagebutton:
+        align (0.0, 1.0) 
+        idle "folder_main.png"
+        hover "folder_hover.png"
+        action Jump("inventory_room")
 
 
-#MAP SECTION STARTS HERE
-label map:
+#FIRST NATION SCENE
+label map_fn:
     $ current_room = 'map'
     scene map_background
     p "Right, let's head to the neighborhood first to find more about how the dam affects people."
@@ -322,7 +268,6 @@ screen map_fn:
         hover "map_neighborhood_hover.png"
         action Jump("fn_room")
 
-#NEIGHBORHOOD
 label fn_room:
     $ current_room = "fn_room"
     if fn_status:
@@ -370,11 +315,10 @@ screen fnsr_options:
         hover "folder_hover.png"
         action Jump("inventory_room")
 
-define fna = Character("Elder", color= "#12a683")
 default been_fnl = False
 default been_fnr = False
 
-#LEFT ROOM
+#Left arrrow: fn
 label fnl:
     if been_fnl:
         scene fn_bkl
@@ -396,11 +340,9 @@ label fnl:
         menu:
             fna "Here's some important information you might want to keep."
             "Take a note.":
-                # Add the dialogue to the journal
                 $ add_to_journal("Another information bla bla")
-                $ renpy.notify("All written down on my journal!")
             "Skip.":
-                pass  # Do nothing if the player chooses not to keep it
+                pass 
         fna "For some, these dams are progress. But to me, they are a means of destruction. They drown our lands, erasing our history and our future."
         menu: 
             "But doesn't powering our society with diesel fuel cause even more harm?":
@@ -412,6 +354,7 @@ label choicefnl1:
     fna "While that may be true, the consequences of building a dam are more harmful to my community."
     fna "You see, we lose more than just land; we lose a part of our identity. We lose our the areas where we hunt for food, for fish and deer. The result of the dam would cause flooding in our area, destroying vegetation, stripping the land of its natural resources."
     jump fnl_choice2
+
 label choicefnl2:
     fna "Yes, this is the duty my community has held since the beginning. The land provides for us, we protect it in turn. Besides we use these lands as a means to provide for ourselves."
     jump fnl_choice2
@@ -458,8 +401,7 @@ screen fnl_options:
         hover "folder_hover.png"
         action Jump("inventory_room")
 
-#RIGHT ROOM
-define fnf = Character("Community Member", color= "#54cd03")
+#Right arrow: fn
 label fnr:
     scene fn_bkr
     $ current_room = "fnr"
@@ -492,9 +434,7 @@ label fnr_support_reason:
 
     menu:
         "That’s something I hadn’t considered. Would you mind if I noted this down?":
-            # Add dialogue to journal
             $ add_to_journal("Community Member's perspective: The dam could bring economic benefits to the First Nation community.")
-            $ renpy.notify("Added to journal!")
             jump fnr_environment
 
         "I see. What about the environmental impact?":
@@ -508,9 +448,8 @@ label fnr_environment:
     menu:
         "Take a note on the environmental impact of diesel fuel and the dam.":
             $ add_to_journal("Diesel fuel spills can harm water sources. The dam could reduce reliance on diesel for power.")
-            $ renpy.notify("Added to journal!")
         "Skip taking notes.":
-            pass  # Do nothing if player chooses not to keep it
+            pass  
 
     fnf "Thank you for taking the time to listen to me. Have a good day!"
     p "You too, goodbye."
@@ -536,7 +475,8 @@ screen fnr_options:
         hover "folder_hover.png"
         action Jump("inventory_room")
 
-#MAP_EN
+
+#LABORATORY / ENV SCENE
 label map_en:
     $ current_room = 'map_en'
     scene map_background
@@ -678,32 +618,154 @@ label lab_professor_green:
         "Don’t add to journal":
             p "I’ll keep this in mind for now."
 
-
     # show arrow_left
-    jump map_to_townhall
+    jump map_pol
 
-#MAP_TO_TOWNHALL (USE JUMP)
-label map_to_townhall:
+#POLITICIAN OFFICE
+label map_pol:
+    $ current_room = 'map_pol'
+    scene map_background
+    p "let's head to mayor to talk to him why he wants the dam."
+    call screen map_office
+    jump office
+
+screen map_office:
+    # office location
+    imagebutton:
+        align(0.787, 0.145)
+        idle "map_office.png"
+        hover "map_office_hover.png"
+        action Jump("office")
+
+#Office Scene (Receptionist Interaction)
+label office:
+    $ current_room = "office"
+    scene backgroundofficefront
+    p "Alright, now it's time to head to the office."
+    p "I need to meet with the politician, but first, there's a receptionist I need to talk to."
+
+    # Receptionist appears
+    show office_rec with dissolve
+    s "Good morning, sir. May I have your name and ID, please?"
+
+    menu:
+        "Give my government ID":
+            # Show the Government ID from the inventory
+            $ government_id = "phone_background.png"
+            show image government_id at half_size
+            p "Here is my government ID. I work for the government."
+
+            s "Thank you, I will let the politician know you're here."
+            jump office_wait
+
+        "Refuse to give ID":
+            p "I don't want to show my ID right now."
+
+            s "I'm afraid I can't let you through without proper identification."
+
+            # Add journal entry about refusal
+            $ add_to_journal("Refused to give government ID to receptionist.")
+
+            jump office_exit
+
+label office_wait:
+    $ current_room = "office_wait"
+    scene backgroundofficefront
+
+    p "Now I need to wait until I get to speak with the politician."
+
+    # Wait for some time, add suspense with a short pause or change in the environment
+    play music "audio/waiting_music.mp3"
+    p "The office is quiet, and the tension feels thick in the air. I wonder what the politician will say."
+
+    # Next interaction with a normal person
+    show np with dissolve
+
+    np "You know, everyone has their own thoughts on this whole dam situation."
+
+    np "Some think it's a good idea, while others say it's not. I don't really know where I stand, honestly."
+
+    np "But in the end, it's out of our hands. There's nothing we can do about it."
+
+    menu:
+        "Ask more about their opinion":
+            np "Well, like I said, I don't really have an opinion. I just think it's something the government wants to do, and it's probably already decided."
+
+            jump office_wait_continue
+
+        "Stay silent and listen":
+            np "Yeah... Well, no one really wants to listen to us regular folks anyway. Politicians only care about their votes."
+
+            $ add_to_journal("Stayed silent while a normal person talked about the dam situation.")
+
+            jump office_wait_continue
+
+label office_wait_continue:
+    # Now the player will meet the politician
+    $ current_room = "office_wait_continue"
+    scene backgroundoffice
+    show pol with dissolve
+    p "Finally, I get to meet the politician."
+
+    # Politician starts speaking
+
+    pol "Ah, I see you're here to discuss the dam situation. Let me tell you, it's going to be a great thing for the community."
+
+    pol "The dam will provide us with more energy, create jobs, and boost the local economy. People don't understand how much it can benefit everyone."
+
+    pol "I know some people are concerned about the environment, but honestly, the positives outweigh the negatives. There's a reason why this project is moving forward."
+
+    menu:
+        "Ask about environmental concerns":
+            pol "The environment? Please, we're using the best technology available to ensure minimal impact. It's a small price to pay for progress."
+
+            $ add_to_journal("Politician downplays environmental concerns and emphasizes the benefits of the dam.")
+
+            jump office_exit
+
+        "Agree with the politician":
+            pol "I knew you would understand. We need this dam to move forward for the future of our community."
+
+            $ add_to_journal("Politician discusses the benefits of the dam with the player.")
+
+            jump office_exit
+
+        "Disagree with the politician":
+            pol "You're entitled to your opinion, but the decision has already been made. The dam will be built, whether you like it or not."
+
+            # Politician becomes angry and the player can't get more information
+            $ add_to_journal("Politician becomes frustrated with the player and refuses to provide more details.")
+
+            jump office_exit
+
+label office_exit:
+    scene map_background
+    p "I think it's time to head back. The meeting at the town hall is coming up, and I need to be prepared."
+    jump map_town
+
+#TOWNHALL 
+label map_town:
     $ current_room = 'map'
     scene map_background
     p "Now, it is time for you to vote!"
     call screen map_tn
     jump tn_room
 
-
 screen map_tn:
     #neighborhood
     imagebutton:
-        align(0.780, 0.722)
+        align(0.785, 0.726)
         idle "map_townhall.png"
         hover "map_townhall_hover.png"
         action Jump("tn_room")
 
 label tn_room:
+    $ current_room = "town_hall"
     scene bk_townhall
-    p "Alight! I think it is time to show my standign point."
-    p "Let me check my note again..."
-    show screen voting_buttons
+    p "After gathering all the evidence, it's time to present my decision."
+    p "The town hall is buzzing with discussions from all sides."
+    np "Welcome to the council meeting. Today, we will vote on whether to construct The Great Ontartio Dam. Your voices will help determine the future of our community and the environment."
+    call screen voting_buttons
 
 screen voting_buttons:
     add "bk_townhall.png"
@@ -726,50 +788,46 @@ screen yes_checkquiz:
 
     # Create a frame
     frame:
-        xsize 500 
+        align(0.5, 0.5)
+        xpadding 10
+        ypadding 10
+        xsize 600
         ysize 600
-        xalign 0.5 
-        yalign 0.5 
         
-        # Display the "My Journal" text at the center of the frame
-        text "My Journal" at center 
-        
-        vbox:
-            xalign 0.5
-            yalign 0.5
-            spacing 10  # Space between buttons
-            
-            # Loop through journal entries and display each as a textbutton
-            for entry in journal_entries:
-                textbutton entry action [Function(ToggleSelected, entry)]
-            
-            # Button to check answers
-            textbutton "Check Answers" action [Function(check_answers_yes)]
+        viewport:
+            draggable True
+            scrollbars "vertical" 
+            vbox:
+                xalign 0.5
+                yalign 0.5
+                spacing 10  # Space between buttons
+                text "My Journal" size 30 xalign 0.5 color "#FF5733"
+                for entry in journal_entries:
+                    textbutton entry action [Function(ToggleSelected, entry)]
+                textbutton "Check Answers" action [Function(check_answers_yes)]
 
 screen no_checkquiz:
     add "bk_townhall.png"
 
     # Create a frame
     frame:
-        xsize 500 
+        align(0.5, 0.5)
+        xpadding 10
+        ypadding 10
+        xsize 600
         ysize 600
-        xalign 0.5 
-        yalign 0.5 
         
-        # Display the "My Journal" text at the center of the frame
-        text "My Journal" at center 
-        
-        vbox:
-            xalign 0.5
-            yalign 0.5
-            spacing 10  # Space between buttons
-            
-            # Loop through journal entries and display each as a textbutton
-            for entry in journal_entries:
-                textbutton entry action [Function(ToggleSelected, entry)]
-            
-            # Button to check answers
-            textbutton "Check Answers" action [Function(check_answers_no)]
+        viewport:
+            draggable True
+            scrollbars "vertical" 
+            vbox:
+                xalign 0.5
+                yalign 0.5
+                spacing 10  # Space between buttons
+                text "My Journal" size 30 xalign 0.5 color "#FF5733"
+                for entry in journal_entries:
+                    textbutton entry action [Function(ToggleSelected, entry)]
+                textbutton "Check Answers" action [Function(check_answers_no)]
 
 label task_passed:
     p "Congratulations! You've selected the correct answers and passed the task."
