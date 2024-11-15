@@ -166,31 +166,28 @@ label start:
     #Tutorial
     $ current_room = "start"
     if bedroom_status:
-        scene bk_t_bedroom
+        scene bk_t_bedroom # with fade
         call screen bd_press
     else:
+        play sound newsbroadcast
         scene bk_t_bedroom
-        p "Waking up to the sound of the TV playing isn't an everyday occurence."
-        p "But, as weird as it was. If not for the TV, I wouldn't have known about, THAT."
-        play sound "audio/newsbroadcast.mp3"
-        tv "BREAKING NEWS: The city council is holding a vote for the construction of the (river name) Dam. For the first time in years, us the people will have a choice on the matter."
-        p "Oh."
-        p "That river."
+        with fade 
+        tv "We are building a hydroelectric dam at the local river."
+        "We're what?!"
+        tv "Well, the city is thinking about it"
+        "Damn, that really sucks."
+        "I love going to the river."
         stop sound
         scene bk_river
         play music "audio/naturemusic.mp3" 
-        p "I spent a lot of time there with everyone."
-        p "Most of it was me just... Trying to get away from life by canoeing or hanging out with my friends."
-        p "But now that life's gotten more and more busy, I haven't really had the time to head back there."
-        p "Not to mention, everyone else has been too busy to go hangout."
-        p "But... If that dam were to be built...."
-        scene bk_river_rev
-        p "The river from my memories would cease to exist."
+        "I spent a lot of time there with everyone."
+        "Most of it was me just..."
+        "Trying to get away from life by canoeing or hanging out with my friends."
         stop music fadeout 1.0
         scene bk_t_bedroom
         play sound "audio/phone_buzz.mp3"
         "Phone" "*bzt* *bzt*"
-        p "My phone? Who could be calling at this time?"
+        "My phone?"
         jump phone_talking
 
 label phone_talking:
@@ -199,30 +196,28 @@ label phone_talking:
     #Phone conversation starts here
     nvl_narrator "(⁄ ⁄•⁄ω⁄•⁄ ⁄)   (´｡• ᵕ •｡`) ♡"
     play sound "audio/ReceiveText.ogg"
-    f_nvl "Yo! Did you see what was on the TV?"
+    f_nvl "OMG!! Did you hear the news? The city council wants to build a dam on our river!"
     play sound "audio/SendText.ogg"
-    p_nvl "I did, what about it?"
+    p_nvl "No I can’t believe it, I even love to go there by myself."
     play sound "audio/ReceiveText.ogg"
-    f_nvl "I can’t believe they are making a dam, we always use to go canoeing at the river!"
+    f_nvl "I guess no more canoeing, swimming, hanging out at the river."
     play sound "audio/SendText.ogg"
-    p_nvl "Yeah.. But we haven't been there in a while."
+    p_nvl "Sadly..."
     play sound "audio/ReceiveText.ogg"
-    f_nvl "That doesn't mean that place isn't important anymore!"
+    f_nvl "Wait, you work at the town hall, right?."
     play sound "audio/SendText.ogg"
-    p_nvl "..."
+    p_nvl "Yes"
     play sound "audio/ReceiveText.ogg"
-    f_nvl "Listen. You know how you work for the government? Your choice matters! Maybe... Your vote will make a difference on the council\'s decision to build the dam or not."
+    f_nvl "So, you must have a say in this. You should do something about it."
     play sound "audio/SendText.ogg"
-    p_nvl "But I don't know enough about dams to know if they really should be built or not..."
+    p_nvl "You’re right, I’ll figure out just how important this dam is to our community."
     play sound "audio/ReceiveText.ogg"
-    f_nvl "Well my friend. You can learn."
+    p_nvl "Guess I’d better dive in before this idea floods the town! Someone bring me some floaties-I’m diving in.."
     play sound "audio/ReceiveText.ogg"
-    f_nvl "Some first nation communities located close to the river are protesting. Why don't you go speak to some of them and learn about their perspectives on the situation?"
-    play sound "audio/SendText.ogg"
-    p_nvl "You know what? That\'s a great idea! I'll head on over right now."
+    f_nvl "HAHA, good luck , well I got to go, cya."
 
     scene bk_t_bedroom
-    p "Alright! No more talking. Let's go exploring!!"
+    "Alright! No more talking. Let's go exploring!!"
     $ bedroom_status = True
     call screen bd_press
    

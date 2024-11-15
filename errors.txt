@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 811: the bold keyword argument was not given a value.
-    text "My Journal" size 30 xalign 0.5 color "#FF5733" bold = True
-                                                              ^
+File "game/script.rpy", line 172: play requires a file
+    play newsbroadcast
+                      ^
 
-File "game/script.rpy", line 834: the bold keyword argument was not given a value.
-    text "My Journal" size 30 xalign 0.5 color "#FF5733" bold = True
-                                                              ^
-
-Ren'Py Version: Ren'Py 8.3.0.24082114
-Fri Nov 15 00:06:52 2024
+Ren'Py Version: Ren'Py 8.3.2.24090902
+Fri Nov 15 16:42:26 2024
