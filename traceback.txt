@@ -1,90 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 775, in script
-    call screen voting_buttons
-  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/script.rpy", line 793, in execute
-    screen yes_checkquiz:
-  File "game/script.rpy", line 793, in execute
-    screen yes_checkquiz:
-  File "game/script.rpy", line 797, in execute
-    frame:
-  File "game/script.rpy", line 806, in execute
-    vbox:
-  File "game/script.rpy", line 813, in execute
-    for entry in journal_entries:
-  File "game/script.rpy", line 814, in execute
-    hbox:
-  File "game/script.rpy", line 818, in execute
-    if entry in selected_options:
-  File "game/script.rpy", line 822, in execute
-    textbutton "[ ]" action [Function(ToggleSelected, entry)]
-ValueError: expected expression
+  File "game/script.rpy", line 458, in script
+    jump fnr_dialogue
+ScriptError: could not find label 'fnr_dialogue'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 775, in script
-    call screen voting_buttons
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/ast.py", line 1974, in execute
-    self.call("execute")
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/ast.py", line 1953, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/statements.py", line 374, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/exports/statementexports.py", line 345, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/display/core.py", line 2188, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/display/core.py", line 2705, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/display/screen.py", line 480, in visit_all
-    callback(self)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/display/core.py", line 2705, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/display/screen.py", line 491, in per_interact
-    self.update()
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/display/screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/script.rpy", line 793, in execute
-    screen yes_checkquiz:
-  File "game/script.rpy", line 793, in execute
-    screen yes_checkquiz:
-  File "game/script.rpy", line 797, in execute
-    frame:
-  File "game/script.rpy", line 806, in execute
-    vbox:
-  File "game/script.rpy", line 813, in execute
-    for entry in journal_entries:
-  File "game/script.rpy", line 814, in execute
-    hbox:
-  File "game/script.rpy", line 818, in execute
-    if entry in selected_options:
-  File "game/script.rpy", line 822, in execute
-    textbutton "[ ]" action [Function(ToggleSelected, entry)]
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/text/text.py", line 2071, in _scope
-    return self.set_text(self.text_parameter, scope, self.substitute, update)
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/text/text.py", line 2110, in set_text
-    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/substitutions.py", line 373, in substitute
-    s = interpolate(s, variables) # type: ignore
-  File "/Users/pongpnag8848/Downloads/renpy-8.3.0-sdk/renpy/substitutions.py", line 64, in interpolate
-    raise ValueError('expected expression')
-ValueError: expected expression
+  File "game/script.rpy", line 458, in script
+    jump fnr_dialogue
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1699, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/Applications/renpy-8.3.2-sdk/renpy/script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'fnr_dialogue'.
 
-macOS-10.16-x86_64-i386-64bit x86_64
-Ren'Py 8.3.0.24082114
+macOS-14.6.1-arm64-arm-64bit arm64
+Ren'Py 8.3.2.24090902
 Balancing the flow 1.0
-Thu Nov 14 23:38:35 2024
+Sat Nov 16 21:57:19 2024

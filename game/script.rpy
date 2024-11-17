@@ -170,6 +170,7 @@ label start:
         call screen bd_press
     else:
         play sound newsbroadcast
+        pause 2.0 
         scene bk_t_bedroom
         with fade 
         tv "We are building a hydroelectric dam at the local river."
@@ -215,6 +216,8 @@ label phone_talking:
     p_nvl "Guess I’d better dive in before this idea floods the town! Someone bring me some floaties-I’m diving in.."
     play sound "audio/ReceiveText.ogg"
     f_nvl "HAHA, good luck , well I got to go, cya."
+    play sound "audio/ReceiveText.ogg"
+    p_nvl "Talk to you later, bye."
 
     scene bk_t_bedroom
     "Alright! No more talking. Let's go exploring!!"
@@ -251,7 +254,8 @@ screen bd_press:
 label map_fn:
     $ current_room = 'map'
     scene map_background
-    p "Right, let's head to the neighborhood first to find more about how the dam affects people."
+    with fade 
+    "Right, let's head to the neighborhood first to find more about how the dam affects people."
     call screen map_fn
     jump fn_room
 
@@ -267,7 +271,7 @@ label fn_room:
     $ current_room = "fn_room"
     if fn_status:
         scene fn_bksr
-        p "Am I ready to leave this area?"
+        "Am I ready to leave this area?"
         menu:
             "Yep!":
                 jump map_en
@@ -275,7 +279,7 @@ label fn_room:
                 jump choicesfnstay
     else:
         scene fn_bksr
-        p "If I walk around I might run into some people to talk to."
+        "If I walk around I might run into some people to talk to."
         $ fn_status = True
         call screen fnsr_options
 
@@ -322,62 +326,109 @@ label fnl:
 
     else:
         scene fn_bkl
+        with fade 
         $ current_room = "fnl"
         $ been_fnl = True
         show fnaagainst at double_size
-        p "Hi, I wanted to ask you some questions about the upcoming dam construction vote."
-        fna "Of course, what is your question?"
-        p "I would like to understand more about what you're advocating for. Could you tell me your opinion on the matter and why it's important to you?"
-        fna "For one, I am completely against the whole dam construction idea."
-        fna "Our ancestors have lived here for thousands of years. The nearby river is our lifeblood. It is not just water; it is our spirit, our heritage."
-        fna "Here's some important information you might want to keep."
-        #example of how you integrate a journal system
+        fna "Hello and welcome."
+        fna "What brings you here?"
+        p "Hello, my name is Evelyn, and I'm here to ask you..."
+        p "Umm.. What do you think about the plan to build a dam on the nearby river?"
+        fna "Ahh, I see why you're here"
+        fna "You want us to give up our land, so you..."
+        fna "So you can build that dam."
+        fna "Our community has right to these lands, including that river."
+        fna "we will try to halt that construction no matter what."
+        p "No, you misunderstood. I am just trying to learn more about your perspective."
+        fna "My perspective?"
+        fna "This is our land and we will not allow you to destroy it with your technology."
+        p "Why do you think that a hydro-electric dam is destorying the land?"
+        fna "We are not stupid."
+        fna "We know all about the bad affects of the golorious hydro-electric dam"
+        p "Oh really? What are they?"
+        fna "There are many, where should I begin."
+        fna "Our ancestors lived along these waters. The river is our life, blood and spirit."
         menu:
-            fna "Here's some important information you might want to keep."
+            "Our ancestors lived along these waters. The river is our life, blood and spirit."
             "Take a note.":
-                $ add_to_journal("Another information bla bla")
+                $ add_to_journal("Our ancestors lived along these waters. The river is our life, blood and spirit.")
             "Skip.":
                 pass 
-        fna "For some, these dams are progress. But to me, they are a means of destruction. They drown our lands, erasing our history and our future."
-        menu: 
-            "But doesn't powering our society with diesel fuel cause even more harm?":
-                jump choicefnl1
-            "So, the land provides for you and your community, and in turn you wish to protect it?":
-                jump choicefnl2
+        p "Interesting, please, tell me more."
+        fna "Secondly, these dams drown our lands, erasing our history and future."
+        menu:
+            "Secondly, these dams drown our lands, erasing our history and future."
+            "Take a note.":
+                $ add_to_journal("Secondly, these dams drown our lands, erasing our history and future.")
+            "Skip.":
+                pass 
+        fna "The land provides for us, and in return we protect."
+        p "So, is it because of cultural reasons?"
+        fna "That is right, destroying these lands for energy disregards our way of life."
+        fna "Also, it's more than that."
+        fna "We will lose our hunting grounds for fish and deer, that is our source of income and food."
+        menu:
+            "We will lose our hunting grounds for fish and deer, that is our source of income and food."
+            "Take a note.":
+                $ add_to_journal("We will lose our hunting grounds for fish and deer, that is our source of income and food.")
+            "Skip.":
+                pass
+        fna "It will destroy the nature beauty of the river."
+        p "So it is more than just cultural reason?"
+        fna "Of course it is more than just cultural reasons."
+        fna "Some people just want a dam to boost their economy."
+        fna "They don't really care about the land, the water, or the skies."
+        fna "That is why we will use the power of our treaties in the court of law to resist the constuction of the dam."
+        p "I understand your reasoning."
+        p "Thank you for helping understand your persepctive."
+        fna "You're welcome, I hope you can help us stop the construction of that dam."
+        p "I'll wee what I can do."
+        p "Good bye."
+        fna "Bye."
+        call screen fnl_options
+    
+#         #example of how you integrate a journal system
+#         fna "For some, these dams are progress. But to me, they are a means of destruction. They drown our lands, erasing our history and our future."
+#         menu: 
+#             "But doesn't powering our society with diesel fuel cause even more harm?":
+#                 jump choicefnl1
+#             "So, the land provides for you and your community, and in turn you wish to protect it?":
+#                 jump choicefnl2
 
-label choicefnl1:
-    fna "While that may be true, the consequences of building a dam are more harmful to my community."
-    fna "You see, we lose more than just land; we lose a part of our identity. We lose our the areas where we hunt for food, for fish and deer. The result of the dam would cause flooding in our area, destroying vegetation, stripping the land of its natural resources."
-    jump fnl_choice2
+# label choicefnl1:
+#     fna "While that may be true, the consequences of building a dam are more harmful to my community."
+#     fna "You see, we lose more than just land; we lose a part of our identity. We lose our the areas where we hunt for food, for fish and deer. The result of the dam would cause flooding in our area, destroying vegetation, stripping the land of its natural resources."
+#     jump fnl_choice2
 
-label choicefnl2:
-    fna "Yes, this is the duty my community has held since the beginning. The land provides for us, we protect it in turn. Besides we use these lands as a means to provide for ourselves."
-    jump fnl_choice2
+# label choicefnl2:
+#     fna "Yes, this is the duty my community has held since the beginning. The land provides for us, we protect it in turn. Besides we use these lands as a means to provide for ourselves."
+#     jump fnl_choice2
 
-label fnl_choice2:
-    menu:
-        "But, there's always a different place where you can hunt... With the amount of energy required for society, don't you think we need more dams to help foster this need?":
-            jump choicefnl3
-        "So, for you, you're generally against this as it is harmful for your community's existence and because it harms your identity?":
-            jump choicefnl4
+# label fnl_choice2:
+#     menu:
+#         "But, there's always a different place where you can hunt... With the amount of energy required for society, don't you think we need more dams to help foster this need?":
+#             jump choicefnl3
+#         "So, for you, you're generally against this as it is harmful for your community's existence and because it harms your identity?":
+#             jump choicefnl4
 
-label choicefnl3:
-    fna "It seems that you aren't listening to what I have to say."
-    fna "Then, I will kindly ask you to leave me be."
-    hide fnaagainst at double_size
-    p "That... could've gone better."
-    p "I didn't get to ask her to add her account to my journal..."
-    call screen fnl_options
+# label choicefnl3:
+#     fna "It seems that you aren't listening to what I have to say."
+#     fna "Then, I will kindly ask you to leave me be."
+#     hide fnaagainst at double_size
+#     p "That... could've gone better."
+#     p "I didn't get to ask her to add her account to my journal..."
+#     call screen fnl_options
 
-label choicefnl4:
-    fna "Yes."
-    p "Would you be willing to write that down in my notebook for me? I wish to learn all that I can about this situation."
-    fna "Of course!"
-    $ fn_counter = True
-    p "Thank you so much!"
-    fna "Well I best go back to what I was doing before, take care."
-    hide fnaagainst at double_size
-    call screen fnl_options
+# label choicefnl4:
+#     fna "Yes."
+#     p "Would you be willing to write that down in my notebook for me? I wish to learn all that I can about this situation."
+#     fna "Of course!"
+#     $ fn_counter = True
+#     p "Thank you so much!"
+#     fna "Well I best go back to what I was doing before, take care."
+#     hide fnaagainst at double_size
+#     call screen fnl_options
+
 
 screen fnl_options:
     #right option
@@ -402,56 +453,100 @@ label fnr:
     $ current_room = "fnr"
     if been_fnr:
         scene fn_bkr
-        p "Is there anything else I need to discuss with the community members here?"
-        menu:
-            "Yes, let's continue the conversation.":
-                jump fnr_dialogue
-            "No, I think I'm done here.":
-                jump fn_room
+        call screen fnr_options
+        # If you want to be able to return back. add discussion here.
+        # p "Is there anything else I need to discuss with the community members here?"
+        # menu:
+        #     "Yes, let's continue the conversation.":
+        #         jump fnr_dialogue
+        #     "No, I think I'm done here.":
+        #         jump fn_room
+
     else:
         scene fn_bkr
         $ been_fnr = True
         show fnafor 
         fnf "Excuse me."
         p "Yes?"
-        fnf "I couldn’t help but overhear you speaking with other members of our community."
-        fnf "I would like to provide my perspective, if you have some spare time."
+        fnf "I would like to provide my opinion on the dam."
         p "Yes, I would love to hear your opinion."
         p "What do you think about the construction of a new dam?"
+        fnf "I really care about our land. But..."
+        fnf "I think that the dam might be a good way to harness energy for our community."
+        p "Does that mean you support building the dam?"
+        fnf "Yes, I do support building the dam."
+        p "Why?"
+        fnf "Building the dam will provide jobs and contracts to First Nations."
+        menu:
+            "Building the dam will provide jobs and contracts to First Nations."
+            "Take a note.":
+                $ add_to_journal("Building the dam will provide jobs and contracts to First Nations..")
+            "Skip.":
+                pass
+        fnf "This could be a really big boost to our economy."
+        p "Ohh, okay."
+        p "Is there any other reason?"
+        fnf "Yes, the dam will remove our communities dependence on diesel oil for power."
+        menu:
+            "Yes, the dam will remove our communities dependence on diesel oil for power."
+            "Take a note.":
+                $ add_to_journal("Yes, the dam will remove our communities dependence on diesel oil for power.")
+            "Skip.":
+                pass
+        fnf "You use diesel fuel to power your community?"
+        p "Yes, we rely on it for electricity."
+        p "Any power outages can last for days at a time."
+        fnf "That does not sounds good."
+        p "It is not."
+        p "The dam will provides reliable energy."
+        menu:
+            "The dam will provides reliable energy."
+            "Take a note.":
+                $ add_to_journal("The dam will provides reliable energy.")
+            "Skip.":
+                pass
+        p "Well, thank you for sharing that with me."
+        fnf "That's all I wanted to say."
+        fnf "Thanks for listening"
+        p "No problem, thank you for sharing."
+        fnf "Bye."
+        hide fnafor
+        call screen fnr_options
 
-label fnr_opinion_differs:
-    fnf "Well, I have the right to my own opinion, don’t I?"
-    p "Yes, of course. Please, tell me more about why you support it."
 
-label fnr_support_reason:
-    fnf "Building the dam will provide jobs to our people and contracts to First Nation developers."
-    fnf "This could really benefit our community economically."
+# label fnr_opinion_differs:
+#     fnf "Well, I have the right to my own opinion, don’t I?"
+#     p "Yes, of course. Please, tell me more about why you support it."
 
-    menu:
-        "That’s something I hadn’t considered. Would you mind if I noted this down?":
-            $ add_to_journal("Community Member's perspective: The dam could bring economic benefits to the First Nation community.")
-            jump fnr_environment
+# label fnr_support_reason:
+#     fnf "Building the dam will provide jobs to our people and contracts to First Nation developers."
+#     fnf "This could really benefit our community economically."
 
-        "I see. What about the environmental impact?":
-            jump fnr_environment
+#     menu:
+#         "That’s something I hadn’t considered. Would you mind if I noted this down?":
+#             $ add_to_journal("Community Member's perspective: The dam could bring economic benefits to the First Nation community.")
+#             jump fnr_environment
 
-label fnr_environment:
-    p "Isn’t diesel fuel harmful to the environment?"
-    fnf "Oh, absolutely. And spills can contaminate large amounts of water."
-    p "Thank you for sharing that perspective with me."
+#         "I see. What about the environmental impact?":
+#             jump fnr_environment
 
-    menu:
-        "Take a note on the environmental impact of diesel fuel and the dam.":
-            $ add_to_journal("Diesel fuel spills can harm water sources. The dam could reduce reliance on diesel for power.")
-        "Skip taking notes.":
-            pass  
+# label fnr_environment:
+#     p "Isn’t diesel fuel harmful to the environment?"
+#     fnf "Oh, absolutely. And spills can contaminate large amounts of water."
+#     p "Thank you for sharing that perspective with me."
 
-    fnf "Thank you for taking the time to listen to me. Have a good day!"
-    p "You too, goodbye."
+#     menu:
+#         "Take a note on the environmental impact of diesel fuel and the dam.":
+#             $ add_to_journal("Diesel fuel spills can harm water sources. The dam could reduce reliance on diesel for power.")
+#         "Skip taking notes.":
+#             pass  
 
-    # End conversation, return to options
-    hide fnafor 
-    call screen fnr_options
+#     fnf "Thank you for taking the time to listen to me. Have a good day!"
+#     p "You too, goodbye."
+
+#     # End conversation, return to options
+#     hide fnafor 
+#     call screen fnr_options
 
 screen fnr_options:
     #left option
@@ -475,9 +570,36 @@ screen fnr_options:
 label map_en:
     $ current_room = 'map_en'
     scene map_background
+    pause 1.0
+    jump text_after_first_nations
+    with fade
     p "Right, let's head to the University of Toronto to talk to some experts about the dam."
     call screen map_lab
     jump lab_reception
+
+label map_en_continued:
+    $ current_room = 'map_en'
+    scene map_background
+    p "Right, let's head to the University of Toronto to talk to some experts about the dam."
+    call screen map_lab
+    jump lab_reception
+
+label text_after_first_nations:
+    scene map_background
+    # nvl_narrator "(⁄ ⁄•⁄ω⁄•⁄ ⁄)   (´｡• ᵕ •｡`) ♡"
+    play sound "audio/ReceiveText.ogg"
+    f_nvl "They're some really smart professor at UofT that would love to chat."
+    play sound "audio/SendText.ogg"
+    p_nvl "Oh really, who?"
+    play sound "audio/ReceiveText.ogg"
+    f_nvl "A friend of mine, Professor Engel. He has a PHD in environmental studies."
+    play sound "audio/SendText.ogg"
+    p_nvl "Okay, I'll head there now."
+    play sound "audio/ReceiveText.ogg"
+    f_nvl "The address is 40 St George St."
+    play sound "audio/SendText.ogg"
+    p_nvl "Great."
+    jump map_en_continued
 
 screen map_lab:
     # University of Toronto lab location
