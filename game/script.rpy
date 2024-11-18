@@ -8,7 +8,7 @@ define s = Character("Rceptionist", color="#0050df")
 define np = Character("Council leader", color="#00bfae")
 define pol = Character("Politician", color="#00ccff")
 define lab_rec = Character("Receptionist", color="#ff0062")
-define efor = Character("Professor", color="#80ff37")
+define efor = Character("Professor Engels", color="#80ff37")
  
 
 #SET VARIABLES
@@ -572,10 +572,10 @@ label map_en:
     scene map_background
     pause 1.0
     jump text_after_first_nations
-    with fade
-    p "Right, let's head to the University of Toronto to talk to some experts about the dam."
-    call screen map_lab
-    jump lab_reception
+    # with fade
+    # p "Right, let's head to the University of Toronto to talk to some experts about the dam."
+    # call screen map_lab
+    # jump lab_reception
 
 label map_en_continued:
     $ current_room = 'map_en'
@@ -592,7 +592,7 @@ label text_after_first_nations:
     play sound "audio/SendText.ogg"
     p_nvl "Oh really, who?"
     play sound "audio/ReceiveText.ogg"
-    f_nvl "A friend of mine, Professor Engel. He has a PHD in environmental studies."
+    f_nvl "A friend of mine, Professor Engels. He has a PHD in environmental studies."
     play sound "audio/SendText.ogg"
     p_nvl "Okay, I'll head there now."
     play sound "audio/ReceiveText.ogg"
@@ -613,66 +613,196 @@ label lab_reception:
     $ current_room = 'lab_reception'
     scene backgroundlabfront
     show lab_rec with dissolve
-    p "I head to the front desk at the University of Toronto's environmental science department."
-    p "I need to talk to someone about the dam, but I don't know who to start with."
+    "I head to the front desk at the University of Toronto's Environmental Science Department."
+    p "Hello"
 
-    lab_rec "Hello! How can I assist you today?"
+    lab_rec "Hi, How can I assist you today?"
 
-    p "Hi, I’m looking to speak with a professor regarding the environmental impact of a dam project. Is anyone available?"
+    p "I'm here to speak with Professor Engels. He should be expecting me."
 
-    lab_rec "Well, Professor Green is in a lecture at the moment. However, Professor Swift might be available to talk about environmental policies and projects."
+    lab_rec "Professor Engels office is located in room 310."
 
-    p "Thank you! I'll speak with Professor Swift then."
-    jump lab_professor_swift
+    p "Thank you!"
+    jump lab_professor_engels
 
-label lab_professor_swift:
-    $ current_room = 'lab_professor_swift'
+label lab_professor_engels:
+    $ current_room = 'lab_professor_engels'
     scene backgroundlab1
     show efor with dissolve
-    p "I knock on Professor Swift's door and enter. She's sitting at her desk surrounded by research papers."
+    $ pros_done = False
+    $ cons_done = False
+    window show
+
+    "I knock on Professor Swift's door and enter. She's sitting at her desk surrounded by research papers."
     
-    efor "Ah, welcome! How can I help you today?"
+    efor "Ah hello, come on in. How can I help you today?"
 
-    p "Hi, I'm doing research on whether dams are good for environment or not. I was hoping to get your perspective on the environmental impact of a proposed dam. Do you think it's a good idea to build it?"
+    p "umm, will you help me explore the benefits of a hydro-electric dam?"
 
-    efor "Ah, the dam project! It's a significant issue. Well, in terms of the environment, building a dam can have some long-term benefits."
-    efor "It provides renewable energy and helps with flood control, especially for nearby communities. Of course, there are environmental impacts too, such as potential loss of biodiversity in the river."
+    p "There is a proposal to build a new hydro-electric dam on Una river"
 
-    p "So, you're suggesting the dam could be beneficial in some ways?"
+    efor "Yes, I would love to speak with you about the dam."
+    
+    efor "Shall we first talk about the pros or the cons?"
 
-    efor "Yes, exactly. The energy it generates could help reduce carbon emissions, and flood control can protect areas prone to natural disasters. However, we also need to consider how it affects fish populations and aquatic life."
-
-    p "That’s helpful, thank you. I think I’ll add this information to my journal."
-
-    # Option to add journal entry
     menu:
-        "Add to journal":
-            $ add_to_journal("Professor Swift explains the potential benefits of the dam, including renewable energy generation and flood control, but also highlights environmental concerns like biodiversity loss.")
-            p "I’ll make sure to write this down for reference."
-        "Don’t add to journal":
-            p "I’ll just remember this for now."
+        "Pros":
+            jump efor_pros
+
+        "Cons":
+            jump efor_cons
+
+label efor_conversation_transition:
+    if cons_done == True and pros_done == True:
+        $ current_room = 'lab_professor_engels'
+        scene backgroundlab1
+        show efor
+        window show
+        p "Well, thank you for telling me."
+        p "I will try to make the right decision when I introduce my findings to town hall."
+        efor "You're welcome and thank you for speaking with me."
+        efor "I am glad you're taking the initiative to learn more about our environment."
+        efor "Have a good day."
+        p "You too, Bye."
+        jump lab_reception2
+    if next_conversation == 'pros':
+        window show
+        jump efor_pros
+    else:
+        window show
+        jump efor_cons
+
+label efor_pros:
+    $ current_room = 'lab_professor_engels'
+    scene backgroundlab1
+    show efor
+    window show
+    efor "Let's consider the benefits of the dam."
+
+    efor "You see, Hydro-electric dams provide reliable energy to communities across the globe."
+
+    efor "The flow of water is non stop, so energy is constantly being harnessed for our use."
+
+    p "That sounds really good."
+
+    efor "Additionally, it is a greener alternative to fossil fuels and coal."
+
+    p "So they want to build the dam to get rid of the use of fossil fuels and coal?"
+
+    efor "Yes, coal and fossil fuels trap heat from escaping our atmosphere."
+
+    efor "It causes global warming."
+
+    p "Global warming, is that even real?"
+
+    efor "Yes, global warming is a very concerning global crisis."
+
+    p "Wow, I can't believe I heard one time that it was a hoax."
+
+    efor "No it's real."
+
+    efor "Anyways..."
     
-    p "Thank you for your time, Professor Swift. I’ll head back to the reception desk to check if Professor Green is available yet."
+    $ pros_done = True
+    $ next_conversation = 'cons'
+    jump efor_conversation_transition
+
+label efor_cons:
+    $ current_room = 'lab_professor_engels'
+    scene backgroundlab1
+    show efor
+
+    efor "There are cons to building the dam."
+
+    efor "To begin with, currently some communities rely on fossil fuels for power."
+
+    efor "An oil spill could contaminate large amount of water, rendering it unable to drink."
+
+    p "Oh, I didn't realise that oil spill were so bad."
+
+    efor "They are."
+
+    efor "Also, building a dam will disrupt an abundunce of wild life."
+
+    efor "Approximately 1 million species are at risk of going extinct."
+
+    p "Those poor thing, we should try and save them."
+
+    efor "Wait... There's more."
+
+    efor "Dam's often lead to flooding in certain areas. The decomposing of plants can release poisonuous methan gas into our air."
+
+    efor "This can be bad for local communities."
+
+    p "Methan gas! That is terrible."
+
+    efor "Yes it is."
+
+    efor "One last note." 
+    
+    efor "Although hydro-electric dams are a greener alternative to fossil fuels."
+
+    efor "They unfortunately perpetuate industrialization, and provide energy at a cheaper price. Which inturn could be worse for the environment over time."
+
+    p "Wow, so green growth isn't always greener."
+
+    efor "Exactly."
+
+    $ cons_done = True
+    $ next_conversation = 'pros'
+    jump efor_conversation_transition
+
+
+    # efor "Let's consider the benefits of the dam."
+
+    # p "So, you're suggesting the dam could be beneficial in some ways?"
+
+    # efor "Yes, exactly. The energy it generates could help reduce carbon emissions, and flood control can protect areas prone to natural disasters. However, we also need to consider how it affects fish populations and aquatic life."
+
+    # p "That’s helpful, thank you. I think I’ll add this information to my journal."
+
+    # # Option to add journal entry
+    # menu:
+    #     "Add to journal":
+    #         $ add_to_journal("Professor Swift explains the potential benefits of the dam, including renewable energy generation and flood control, but also highlights environmental concerns like biodiversity loss.")
+    #         p "I’ll make sure to write this down for reference."
+    #     "Don’t add to journal":
+    #         p "I’ll just remember this for now."
+    
+    # p "Thank you for your time, Professor Swift. I’ll head back to the reception desk to check if Professor Green is available yet."
 
     # show arrow_left
-    jump lab_reception2
+    # jump lab_reception2
 
 label lab_reception2:
     $ current_room = 'lab_reception'
     scene backgroundlabfront
     show lab_rec with dissolve
-    p "I return to the front desk, hoping to catch Professor Green now that her lecture has finished."
+    window show dissolve
+    "At the front desk, the secretary looks up from their computer and offers a polite smile."
 
-    lab_rec "Ah, you're back! Unfortunately, it might still take a little while for Professor Green to finish. However, I just received a call from Steve."
+    lab_rec "Heading out already? I hope your meeting went well!"
+
+    p "Yes, it was quite informative. Thank you for your help earlier."
+    
+    lab_rec "Anytime. Have a great day!"
+
+    "As I step toward the main doors, my phone buzzes in my pocket."
 
     play sound "audio/phone_buzz.mp3"
     f_nvl "Yo! Where are you? The politician is really interested in the dam project and is having a press conference in his office right now."
 
     p_nvl "The politician? I’ll have to check that out, thanks for the heads-up."
 
-    lab_rec "I’ll let you know when Professor Green is ready to meet."
+    f_nvl "I think you should meet him, he might have more information about the dam’s support from the political side."
 
-    jump politician_call
+    p_nvl "Got it, I’ll go talk to him."
+
+    jump map_pol
+
+    # lab_rec "I’ll let you know when Professor Green is ready to meet."
+
+    # jump politician_call
 
 label politician_call:
     $ current_room = 'politician_call'
@@ -690,53 +820,53 @@ label lab_reception3:
     lab_rec "Ah, finally! Professor Green is available now. You can speak with her about the dam's impact."
     jump lab_professor_green
 
-label lab_professor_green:
-    $ current_room = 'lab_professor_green'
-    scene backgroundlab2 with dissolve
-    show efor at left with fade
-    p "I enter Professor Green’s office, and she looks up from her work."
+# label lab_professor_green:
+#     $ current_room = 'lab_professor_green'
+#     scene backgroundlab2 with dissolve
+#     show efor at left with fade
+#     p "I enter Professor Green’s office, and she looks up from her work."
 
-    s "Oh, hello! I’m Professor Sage. I understand you want to discuss the potential impacts of a hydro-electric dam on the Una River?"
+#     s "Oh, hello! I’m Professor Sage. I understand you want to discuss the potential impacts of a hydro-electric dam on the Una River?"
 
-    p "Yes, I’d like to hear your thoughts on the downsides."
+#     p "Yes, I’d like to hear your thoughts on the downsides."
 
-    s "Certainly. Hydro-electric dams have significant environmental costs. They flood large areas of land, disrupting ecosystems and displacing wildlife."
+#     s "Certainly. Hydro-electric dams have significant environmental costs. They flood large areas of land, disrupting ecosystems and displacing wildlife."
 
-    menu:
-        "Ask about habitat disruption":
-            p "How do dams disrupt habitats?"
+#     menu:
+#         "Ask about habitat disruption":
+#             p "How do dams disrupt habitats?"
 
-            s "When land is flooded, entire ecosystems are submerged. Fish, plants, and animals lose their natural habitats."
-            s "This can lead to a loss in biodiversity, harming species that rely on the natural river environment."
+#             s "When land is flooded, entire ecosystems are submerged. Fish, plants, and animals lose their natural habitats."
+#             s "This can lead to a loss in biodiversity, harming species that rely on the natural river environment."
 
-            p "That sounds serious – I hadn’t thought about it that way."
+#             p "That sounds serious – I hadn’t thought about it that way."
 
-        "Ask about pollution concerns":
-            p "Do hydro-electric dams contribute to pollution?"
+#         "Ask about pollution concerns":
+#             p "Do hydro-electric dams contribute to pollution?"
 
-            s "Yes, indirectly. When organic material like plants decays underwater, it releases methane, a potent greenhouse gas."
-            s "Methane contributes to global warming, sometimes even more than carbon dioxide."
+#             s "Yes, indirectly. When organic material like plants decays underwater, it releases methane, a potent greenhouse gas."
+#             s "Methane contributes to global warming, sometimes even more than carbon dioxide."
 
-            p "That’s unexpected. I thought hydro-electric power was cleaner."
+#             p "That’s unexpected. I thought hydro-electric power was cleaner."
 
-            s "Cleaner, yes, but not without environmental consequences."
+#             s "Cleaner, yes, but not without environmental consequences."
 
-    # Continue the conversation
-    p "It seems like there’s a lot to consider. Do you believe the cons outweigh the pros?"
+#     # Continue the conversation
+#     p "It seems like there’s a lot to consider. Do you believe the cons outweigh the pros?"
 
-    s "In many cases, yes. There are less invasive alternatives, like wind and solar, that don’t involve flooding or habitat loss."
-    s "While dams provide energy, the cost to our ecosystems can be too high."
+#     s "In many cases, yes. There are less invasive alternatives, like wind and solar, that don’t involve flooding or habitat loss."
+#     s "While dams provide energy, the cost to our ecosystems can be too high."
 
-    menu:
-        "Add to journal":
-            $ add_to_journal("Professor Sage shared concerns about habitat destruction, methane emissions, and biodiversity loss due to hydro-electric dams.")
-            p "I’ll jot this down in my journal."
+#     menu:
+#         "Add to journal":
+#             $ add_to_journal("Professor Sage shared concerns about habitat destruction, methane emissions, and biodiversity loss due to hydro-electric dams.")
+#             p "I’ll jot this down in my journal."
 
-        "Don’t add to journal":
-            p "I’ll keep this in mind for now."
+#         "Don’t add to journal":
+#             p "I’ll keep this in mind for now."
 
-    # show arrow_left
-    jump map_pol
+#     # show arrow_left
+#     jump map_pol
 
 #POLITICIAN OFFICE
 label map_pol:
