@@ -1,5 +1,5 @@
 ﻿#SET CHARACTERS
-define p = Character("You", color= "#df059a")
+define p = Character("Me", color= "#df059a")
 define tv = Character("Television")
 define f = Character("Friend", color= "#7605df")
 define fna = Character("Elder", color="#12a683")
@@ -193,9 +193,11 @@ label start:
 
 label phone_talking:
     scene bk_t_bedroom 
-    
     #Phone conversation starts here
-    nvl_narrator "(⁄ ⁄•⁄ω⁄•⁄ ⁄)   (´｡• ᵕ •｡`) ♡"
+    # nvl_narrator "(⁄ ⁄•⁄ω⁄•⁄ ⁄)   (´｡• ᵕ •｡`) ♡"
+    nvl clear
+    nvl_mode "phone"
+    window auto
     play sound "audio/ReceiveText.ogg"
     f_nvl "OMG!! Did you hear the news? The city council wants to build a dam on our river!"
     play sound "audio/SendText.ogg"
@@ -269,16 +271,27 @@ screen map_fn:
 
 label fn_room:
     $ current_room = "fn_room"
-    if fn_status:
+    if (been_fnl) and (been_fnr):
+        jump map_en
+    elif fn_status:
         scene fn_bksr
-        "Am I ready to leave this area?"
+        with fade
+        window show
+        "Maybe I should talk to more people..."
         menu:
-            "Yep!":
+            "Maybe I should talk to more people...{fast}"
+            "Leave":
+                window hide 
+                with dissolve
                 jump map_en
-            "Still something to do.":
+                
+            "Stay":
+                window hide
                 jump choicesfnstay
+
     else:
         scene fn_bksr
+        with fade
         "If I walk around I might run into some people to talk to."
         $ fn_status = True
         call screen fnsr_options
@@ -286,7 +299,12 @@ label fn_room:
 label choicesfnstay:
     $ current_room = "choicesfnstay"
     scene fn_bksr
-    call screen fnsr_options
+    if been_fnl:
+        call screen fnl_options_right_only
+    elif been_fnr:
+        call screen fnr_options_left_only
+    else:
+        call screen fnsr_options
 
 screen fnsr_options:
     #left option
@@ -321,6 +339,7 @@ default been_fnr = False
 label fnl:
     if been_fnl:
         scene fn_bkl
+        with fade
         $ current_room = "fnl"
         call screen fnl_options
 
@@ -348,16 +367,18 @@ label fnl:
         p "Oh really? What are they?"
         fna "There are many, where should I begin."
         fna "Our ancestors lived along these waters. The river is our life, blood and spirit."
+        window show
         menu:
-            "Our ancestors lived along these waters. The river is our life, blood and spirit."
+            fna "Our ancestors lived along these waters. The river is our life, blood and spirit.{fast}"
             "Take a note.":
                 $ add_to_journal("Our ancestors lived along these waters. The river is our life, blood and spirit.")
             "Skip.":
                 pass 
         p "Interesting, please, tell me more."
         fna "Secondly, these dams drown our lands, erasing our history and future."
+        window show
         menu:
-            "Secondly, these dams drown our lands, erasing our history and future."
+            "Secondly, these dams drown our lands, erasing our history and future.{fast}"
             "Take a note.":
                 $ add_to_journal("Secondly, these dams drown our lands, erasing our history and future.")
             "Skip.":
@@ -367,8 +388,9 @@ label fnl:
         fna "That is right, destroying these lands for energy disregards our way of life."
         fna "Also, it's more than that."
         fna "We will lose our hunting grounds for fish and deer, that is our source of income and food."
+        window show
         menu:
-            "We will lose our hunting grounds for fish and deer, that is our source of income and food."
+            "We will lose our hunting grounds for fish and deer, that is our source of income and food.{fast}"
             "Take a note.":
                 $ add_to_journal("We will lose our hunting grounds for fish and deer, that is our source of income and food.")
             "Skip.":
@@ -385,50 +407,8 @@ label fnl:
         p "I'll wee what I can do."
         p "Good bye."
         fna "Bye."
+        window hide
         call screen fnl_options
-    
-#         #example of how you integrate a journal system
-#         fna "For some, these dams are progress. But to me, they are a means of destruction. They drown our lands, erasing our history and our future."
-#         menu: 
-#             "But doesn't powering our society with diesel fuel cause even more harm?":
-#                 jump choicefnl1
-#             "So, the land provides for you and your community, and in turn you wish to protect it?":
-#                 jump choicefnl2
-
-# label choicefnl1:
-#     fna "While that may be true, the consequences of building a dam are more harmful to my community."
-#     fna "You see, we lose more than just land; we lose a part of our identity. We lose our the areas where we hunt for food, for fish and deer. The result of the dam would cause flooding in our area, destroying vegetation, stripping the land of its natural resources."
-#     jump fnl_choice2
-
-# label choicefnl2:
-#     fna "Yes, this is the duty my community has held since the beginning. The land provides for us, we protect it in turn. Besides we use these lands as a means to provide for ourselves."
-#     jump fnl_choice2
-
-# label fnl_choice2:
-#     menu:
-#         "But, there's always a different place where you can hunt... With the amount of energy required for society, don't you think we need more dams to help foster this need?":
-#             jump choicefnl3
-#         "So, for you, you're generally against this as it is harmful for your community's existence and because it harms your identity?":
-#             jump choicefnl4
-
-# label choicefnl3:
-#     fna "It seems that you aren't listening to what I have to say."
-#     fna "Then, I will kindly ask you to leave me be."
-#     hide fnaagainst at double_size
-#     p "That... could've gone better."
-#     p "I didn't get to ask her to add her account to my journal..."
-#     call screen fnl_options
-
-# label choicefnl4:
-#     fna "Yes."
-#     p "Would you be willing to write that down in my notebook for me? I wish to learn all that I can about this situation."
-#     fna "Of course!"
-#     $ fn_counter = True
-#     p "Thank you so much!"
-#     fna "Well I best go back to what I was doing before, take care."
-#     hide fnaagainst at double_size
-#     call screen fnl_options
-
 
 screen fnl_options:
     #right option
@@ -440,6 +420,18 @@ screen fnl_options:
         idle "arrowr.png"
         hover "arrowr_hover.png"
         action Jump("fn_room")    
+
+screen fnl_options_right_only:
+    #right option
+    imagebutton:
+        xanchor 0.5
+        yanchor 0.5
+        xpos 0.9
+        ypos 0.6
+        idle "arrowr.png"
+        hover "arrowr_hover.png"
+        action Jump("fnr")  
+
     #folder
     imagebutton:
         align (0.0, 1.0) 
@@ -453,17 +445,11 @@ label fnr:
     $ current_room = "fnr"
     if been_fnr:
         scene fn_bkr
+        with fade
         call screen fnr_options
-        # If you want to be able to return back. add discussion here.
-        # p "Is there anything else I need to discuss with the community members here?"
-        # menu:
-        #     "Yes, let's continue the conversation.":
-        #         jump fnr_dialogue
-        #     "No, I think I'm done here.":
-        #         jump fn_room
-
     else:
         scene fn_bkr
+        with fade
         $ been_fnr = True
         show fnafor 
         fnf "Excuse me."
@@ -477,8 +463,9 @@ label fnr:
         fnf "Yes, I do support building the dam."
         p "Why?"
         fnf "Building the dam will provide jobs and contracts to First Nations."
+        window show
         menu:
-            "Building the dam will provide jobs and contracts to First Nations."
+            "Building the dam will provide jobs and contracts to First Nations.{fast}"
             "Take a note.":
                 $ add_to_journal("Building the dam will provide jobs and contracts to First Nations..")
             "Skip.":
@@ -487,24 +474,27 @@ label fnr:
         p "Ohh, okay."
         p "Is there any other reason?"
         fnf "Yes, the dam will remove our communities dependence on diesel oil for power."
+        window show
         menu:
-            "Yes, the dam will remove our communities dependence on diesel oil for power."
+            "Yes, the dam will remove our communities dependence on diesel oil for power.{fast}"
             "Take a note.":
                 $ add_to_journal("Yes, the dam will remove our communities dependence on diesel oil for power.")
             "Skip.":
                 pass
-        fnf "You use diesel fuel to power your community?"
-        p "Yes, we rely on it for electricity."
-        p "Any power outages can last for days at a time."
-        fnf "That does not sounds good."
-        p "It is not."
-        p "The dam will provides reliable energy."
+        p "You use diesel fuel to power your community?"
+        fnf "Yes, we rely on it for electricity."
+        fnf  "Any power outages can last for days at a time."
+        p "That does not sounds good."
+        fnf "It is not."
+        fnf "The dam will provides reliable energy."
+        window show
         menu:
-            "The dam will provides reliable energy."
+            "The dam will provides reliable energy.{fast}"
             "Take a note.":
                 $ add_to_journal("The dam will provides reliable energy.")
             "Skip.":
                 pass
+        window hide
         p "Well, thank you for sharing that with me."
         fnf "That's all I wanted to say."
         fnf "Thanks for listening"
@@ -512,41 +502,6 @@ label fnr:
         fnf "Bye."
         hide fnafor
         call screen fnr_options
-
-
-# label fnr_opinion_differs:
-#     fnf "Well, I have the right to my own opinion, don’t I?"
-#     p "Yes, of course. Please, tell me more about why you support it."
-
-# label fnr_support_reason:
-#     fnf "Building the dam will provide jobs to our people and contracts to First Nation developers."
-#     fnf "This could really benefit our community economically."
-
-#     menu:
-#         "That’s something I hadn’t considered. Would you mind if I noted this down?":
-#             $ add_to_journal("Community Member's perspective: The dam could bring economic benefits to the First Nation community.")
-#             jump fnr_environment
-
-#         "I see. What about the environmental impact?":
-#             jump fnr_environment
-
-# label fnr_environment:
-#     p "Isn’t diesel fuel harmful to the environment?"
-#     fnf "Oh, absolutely. And spills can contaminate large amounts of water."
-#     p "Thank you for sharing that perspective with me."
-
-#     menu:
-#         "Take a note on the environmental impact of diesel fuel and the dam.":
-#             $ add_to_journal("Diesel fuel spills can harm water sources. The dam could reduce reliance on diesel for power.")
-#         "Skip taking notes.":
-#             pass  
-
-#     fnf "Thank you for taking the time to listen to me. Have a good day!"
-#     p "You too, goodbye."
-
-#     # End conversation, return to options
-#     hide fnafor 
-#     call screen fnr_options
 
 screen fnr_options:
     #left option
@@ -565,11 +520,28 @@ screen fnr_options:
         hover "folder_hover.png"
         action Jump("inventory_room")
 
+screen fnr_options_left_only:
+    #left option
+    imagebutton:
+        xanchor 0.5
+        yanchor 0.5
+        xpos 0.1
+        ypos 0.6
+        idle "arrowl.png"
+        hover "arrowl_hover.png"
+        action Jump("fnl")
+    #folder
+    imagebutton:
+        align (0.0, 1.0) 
+        idle "folder_main.png"
+        hover "folder_hover.png"
+        action Jump("inventory_room")
 
 #LABORATORY / ENV SCENE
 label map_en:
     $ current_room = 'map_en'
     scene map_background
+    with fade
     pause 1.0
     jump text_after_first_nations
     # with fade
@@ -585,8 +557,8 @@ label map_en_continued:
     jump lab_reception
 
 label text_after_first_nations:
-    scene map_background
     # nvl_narrator "(⁄ ⁄•⁄ω⁄•⁄ ⁄)   (´｡• ᵕ •｡`) ♡"
+    nvl_mode "*Bzt* *Bzt*"
     play sound "audio/ReceiveText.ogg"
     f_nvl "They're some really smart professor at UofT that would love to chat."
     play sound "audio/SendText.ogg"
@@ -637,7 +609,7 @@ label lab_professor_engels:
     
     efor "Ah hello, come on in. How can I help you today?"
 
-    p "umm, will you help me explore the benefits of a hydro-electric dam?"
+    p "Umm, will you help me explore the benefits of a hydro-electric dam?"
 
     p "There is a proposal to build a new hydro-electric dam on Una river"
 
@@ -677,29 +649,58 @@ label efor_pros:
     scene backgroundlab1
     show efor
     window show
-    efor "Let's consider the benefits of the dam."
+    
+    efor "Let's talk about why hydro-electric dams are so important."
 
-    efor "You see, Hydro-electric dams provide reliable energy to communities across the globe."
+    efor "To begin with, dams can replace fossil fuels as a primary source of energy."
 
-    efor "The flow of water is non stop, so energy is constantly being harnessed for our use."
+    p "Why is that such a big deal?"
 
-    p "That sounds really good."
+    efor "Fossil fuels, like coal and oil, have several serous problems."
 
-    efor "Additionally, it is a greener alternative to fossil fuels and coal."
+    efor "They trap heat in our atmosphere, which contributes to global warming."
 
-    p "So they want to build the dam to get rid of the use of fossil fuels and coal?"
+    p "Oh, I've heard about global warming. Is it really that bad?"
 
-    efor "Yes, coal and fossil fuels trap heat from escaping our atmosphere."
+    efor "Yes, it's a global crisis." 
+    
+    efor "By switching to cleaner energy source like hyrdo-power, we can significantly reduce greenhouse gas emissions."
+    window show
+    menu:
+        "By switching to cleaner energy source like hyrdo-power, we can significantly reduce greenhouse gas emissions.{fast}"
+        "Take a note.":
+            $ add_to_journal("By switching to cleaner energy source like hyrdo-power, we can significantly reduce greenhouse gas emissions.")
+        "Skip.":
+            pass
 
-    efor "It causes global warming."
+    efor "Another issue with fossil fuels is oil spill."
 
-    p "Global warming, is that even real?"
+    efor "Oil spills contaminate water, killing wildlife and leaving entire areas without clean drinking water."
+    window show
+    menu:
+        "Oil spills contaminate water, killing wildlife and leaving entire areas without clean drinking water.{fast}"
+        "Take a note.":
+            $ add_to_journal("Oil spills contaminate water, killing wildlife and leaving entire areas without clean drinking water.")
+        "Skip.":
+            pass
 
-    efor "Yes, global warming is a very concerning global crisis."
+    p "So dams would mean no more oil spills?"
 
-    p "Wow, I can't believe I heard one time that it was a hoax."
+    efor "Exactly. Instead of relying on oil, hydro-electric dams harness the constant flow of water to generate energy."
 
-    efor "No it's real."
+    p "Reliable energy sounds great. Fossil fuels don't seem so reliable with all the risks."
+
+    efor "With hydro-power, communities get a steady supply of energy without the dangers that come with burning coal or drilling for oil."
+    window show
+    menu:
+        "With hydro-power, communities get a steady supply of energy without the dangers that come with burning coal or drilling for oil.{fast}"
+        "Take a note.":
+            $ add_to_journal("With hydro-power, communities get a steady supply of energy without the dangers that come with burning coal or drilling for oil.")
+        "Skip.":
+            pass
+    window hide
+
+    p "Yes, it's cleaner and more sustainable."
 
     efor "Anyways..."
     
@@ -712,67 +713,59 @@ label efor_cons:
     scene backgroundlab1
     show efor
 
-    efor "There are cons to building the dam."
+    efor "There are downsides to building the dam."
 
-    efor "To begin with, currently some communities rely on fossil fuels for power."
-
-    efor "An oil spill could contaminate large amount of water, rendering it unable to drink."
-
-    p "Oh, I didn't realise that oil spill were so bad."
-
-    efor "They are."
-
-    efor "Also, building a dam will disrupt an abundunce of wild life."
-
-    efor "Approximately 1 million species are at risk of going extinct."
-
-    p "Those poor thing, we should try and save them."
-
-    efor "Wait... There's more."
-
-    efor "Dam's often lead to flooding in certain areas. The decomposing of plants can release poisonuous methan gas into our air."
-
-    efor "This can be bad for local communities."
-
-    p "Methan gas! That is terrible."
-
-    efor "Yes it is."
-
-    efor "One last note." 
+    efor "For one.."
     
-    efor "Although hydro-electric dams are a greener alternative to fossil fuels."
+    efor "Dams disrupt wildlife. Rivers are home to many species, and blocking them can harm ecosystems."
+    window show
+    menu:
+        "Dams disrupt wildlife. Rivers are home to many species, and blocking them can harm ecosystems.{fast}"
+        "Take a note.":
+            $ add_to_journal("Dams disrupt wildlife. Rivers are home to many species, and blocking them can harm ecosystems.")
+        "Skip.":
+            pass
 
-    efor "They unfortunately perpetuate industrialization, and provide energy at a cheaper price. Which inturn could be worse for the environment over time."
+    p "I didn’t think about how it would affect animals."
 
-    p "Wow, so green growth isn't always greener."
+    efor "Yes. Many species could lose their habitats and be at risk of extinction."
+
+    efor "Another issue is flooding."
+    
+    efor "Dams often flood nearby areas, and decomposing plants release methane gas."
+    window show
+    menu:
+        "Dams often flood nearby areas, and decomposing plants release methane gas.{fast}"
+        "Take a note.":
+            $ add_to_journal("Dams often flood nearby areas, and decomposing plants release methane gas.")
+        "Skip.":
+            pass
+
+    p "Methane gas? That sounds dangerous."
+
+    efor "It is. Methane is a powerful greenhouse gas that’s harmful to the environment."
+
+    efor "Lastly,"
+    
+    efor "Dams contribute to industrialization. They make energy cheaper, which leads to more factories and pollution."
+    window show
+    menu:
+        "Dams contribute to industrialization. They make energy cheaper, which leads to more factories and pollution.{fast}"
+        "Take a note.":
+            $ add_to_journal("Dams contribute to industrialization. They make energy cheaper, which leads to more factories and pollution.")
+        "Skip.":
+            pass
+    window hide
+
+    p "So even though they’re greener, they can cause long-term harm?"
+
+    p "It seems like Dams solve some problems but create others."
 
     efor "Exactly."
 
     $ cons_done = True
     $ next_conversation = 'pros'
     jump efor_conversation_transition
-
-
-    # efor "Let's consider the benefits of the dam."
-
-    # p "So, you're suggesting the dam could be beneficial in some ways?"
-
-    # efor "Yes, exactly. The energy it generates could help reduce carbon emissions, and flood control can protect areas prone to natural disasters. However, we also need to consider how it affects fish populations and aquatic life."
-
-    # p "That’s helpful, thank you. I think I’ll add this information to my journal."
-
-    # # Option to add journal entry
-    # menu:
-    #     "Add to journal":
-    #         $ add_to_journal("Professor Swift explains the potential benefits of the dam, including renewable energy generation and flood control, but also highlights environmental concerns like biodiversity loss.")
-    #         p "I’ll make sure to write this down for reference."
-    #     "Don’t add to journal":
-    #         p "I’ll just remember this for now."
-    
-    # p "Thank you for your time, Professor Swift. I’ll head back to the reception desk to check if Professor Green is available yet."
-
-    # show arrow_left
-    # jump lab_reception2
 
 label lab_reception2:
     $ current_room = 'lab_reception'
@@ -800,10 +793,6 @@ label lab_reception2:
 
     jump map_pol
 
-    # lab_rec "I’ll let you know when Professor Green is ready to meet."
-
-    # jump politician_call
-
 label politician_call:
     $ current_room = 'politician_call'
     p "I quickly get in touch with Steve, and he tells me that the politician is attending a press conference at his office. It sounds like the politician is really pushing for the dam’s construction."
@@ -820,53 +809,6 @@ label lab_reception3:
     lab_rec "Ah, finally! Professor Green is available now. You can speak with her about the dam's impact."
     jump lab_professor_green
 
-# label lab_professor_green:
-#     $ current_room = 'lab_professor_green'
-#     scene backgroundlab2 with dissolve
-#     show efor at left with fade
-#     p "I enter Professor Green’s office, and she looks up from her work."
-
-#     s "Oh, hello! I’m Professor Sage. I understand you want to discuss the potential impacts of a hydro-electric dam on the Una River?"
-
-#     p "Yes, I’d like to hear your thoughts on the downsides."
-
-#     s "Certainly. Hydro-electric dams have significant environmental costs. They flood large areas of land, disrupting ecosystems and displacing wildlife."
-
-#     menu:
-#         "Ask about habitat disruption":
-#             p "How do dams disrupt habitats?"
-
-#             s "When land is flooded, entire ecosystems are submerged. Fish, plants, and animals lose their natural habitats."
-#             s "This can lead to a loss in biodiversity, harming species that rely on the natural river environment."
-
-#             p "That sounds serious – I hadn’t thought about it that way."
-
-#         "Ask about pollution concerns":
-#             p "Do hydro-electric dams contribute to pollution?"
-
-#             s "Yes, indirectly. When organic material like plants decays underwater, it releases methane, a potent greenhouse gas."
-#             s "Methane contributes to global warming, sometimes even more than carbon dioxide."
-
-#             p "That’s unexpected. I thought hydro-electric power was cleaner."
-
-#             s "Cleaner, yes, but not without environmental consequences."
-
-#     # Continue the conversation
-#     p "It seems like there’s a lot to consider. Do you believe the cons outweigh the pros?"
-
-#     s "In many cases, yes. There are less invasive alternatives, like wind and solar, that don’t involve flooding or habitat loss."
-#     s "While dams provide energy, the cost to our ecosystems can be too high."
-
-#     menu:
-#         "Add to journal":
-#             $ add_to_journal("Professor Sage shared concerns about habitat destruction, methane emissions, and biodiversity loss due to hydro-electric dams.")
-#             p "I’ll jot this down in my journal."
-
-#         "Don’t add to journal":
-#             p "I’ll keep this in mind for now."
-
-#     # show arrow_left
-#     jump map_pol
 
 #POLITICIAN OFFICE
 label map_pol:
@@ -888,14 +830,17 @@ screen map_office:
 label office:
     $ current_room = "office"
     scene backgroundofficefront
-    p "Alright, now it's time to head to the office."
-    p "I need to meet with the politician, but first, there's a receptionist I need to talk to."
+    with fade
+    "I need to meet with the politician, but first, there's a receptionist I need to talk to."
 
     # Receptionist appears
     show office_rec with dissolve
     s "Good morning, sir. May I have your name and ID, please?"
 
+    "If I want to speak with the politican, I should give her my ID."
+
     menu:
+        "If I want to speak with the politican, I should give her my ID. {fast}"
         "Give my government ID":
             # Show the Government ID from the inventory
             $ government_id = "phone_background.png"
@@ -932,7 +877,7 @@ label office_wait:
 
     np "Some think it's a good idea, while others say it's not. I don't really know where I stand, honestly."
 
-    np "But in the end, it's out of our hands. There's nothing we can do about it."
+    np "But in the end, it's out of our hands. We should try to make the right decision."
 
     menu:
         "Ask more about their opinion":
