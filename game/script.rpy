@@ -375,7 +375,7 @@ label fnl:
             "Skip.":
                 pass 
         p "Interesting, please, tell me more."
-        fna "Secondly, these dams drown our lands, erasing our history and future."
+        fna "Secondly, these dams might drown our lands, erasing our history and future."
         window show
         menu:
             "Secondly, these dams drown our lands, erasing our history and future.{fast}"
@@ -404,7 +404,7 @@ label fnl:
         p "I understand your reasoning."
         p "Thank you for helping understand your persepctive."
         fna "You're welcome, I hope you can help us stop the construction of that dam."
-        p "I'll wee what I can do."
+        p "I'll see what I can do."
         p "Good bye."
         fna "Bye."
         window hide
@@ -552,7 +552,7 @@ label map_en:
 label map_en_continued:
     $ current_room = 'map_en'
     scene map_background
-    p "Right, let's head to the University of Toronto to talk to some experts about the dam."
+    p "Right, let's head to the University of Toronto Lab to talk to some experts about the dam."
     call screen map_lab
     jump lab_reception
 
