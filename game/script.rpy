@@ -6,7 +6,7 @@ define fna = Character("Elder", color="#12a683")
 define fnf = Character("Community Member", color="#54cd03")
 define s = Character("Rceptionist", color="#0050df")
 define np = Character("Council leader", color="#00bfae")
-define pol = Character("Politician", color="#00ccff")
+define pol = Character("Doug Ford", color="#00ccff")
 define lab_rec = Character("Receptionist", color="#ff0062")
 define efor = Character("Professor Engels", color="#80ff37")
  
@@ -175,7 +175,7 @@ label start:
         with fade 
         tv "We are building a hydroelectric dam at the local river."
         "We're what?!"
-        tv "Well, the city is thinking about it"
+        tv "Well, the city is thinking about it."
         "Damn, that really sucks."
         "I love going to the river."
         stop sound
@@ -187,8 +187,6 @@ label start:
         stop music fadeout 1.0
         scene bk_t_bedroom
         play sound "audio/phone_buzz.mp3"
-        "Phone" "*bzt* *bzt*"
-        "My phone?"
         jump phone_talking
 
 label phone_talking:
@@ -196,7 +194,7 @@ label phone_talking:
     #Phone conversation starts here
     # nvl_narrator "(⁄ ⁄•⁄ω⁄•⁄ ⁄)   (´｡• ᵕ •｡`) ♡"
     nvl clear
-    nvl_mode "phone"
+    nvl_mode "*Bzt* *Bzt*"
     window auto
     play sound "audio/ReceiveText.ogg"
     f_nvl "OMG!! Did you hear the news? The city council wants to build a dam on our river!"
@@ -360,10 +358,10 @@ label fnl:
         fna "we will try to halt that construction no matter what."
         p "No, you misunderstood. I am just trying to learn more about your perspective."
         fna "My perspective?"
-        fna "This is our land and we will not allow you to destroy it with your technology."
+        fna "This is our land and we will not allow you to destroy it with your engineering."
         p "Why do you think that a hydro-electric dam is destorying the land?"
         fna "We are not stupid."
-        fna "We know all about the bad affects of the golorious hydro-electric dam"
+        fna "We know all about the bad affects of the golorious hydro-electric dam."
         p "Oh really? What are they?"
         fna "There are many, where should I begin."
         fna "Our ancestors lived along these waters. The river is our life, blood and spirit."
@@ -378,7 +376,7 @@ label fnl:
         fna "Secondly, these dams might drown our lands, erasing our history and future."
         window show
         menu:
-            "Secondly, these dams drown our lands, erasing our history and future.{fast}"
+            fna "Secondly, these dams drown our lands, erasing our history and future.{fast}"
             "Take a note.":
                 $ add_to_journal("Secondly, these dams drown our lands, erasing our history and future.")
             "Skip.":
@@ -390,19 +388,19 @@ label fnl:
         fna "We will lose our hunting grounds for fish and deer, that is our source of income and food."
         window show
         menu:
-            "We will lose our hunting grounds for fish and deer, that is our source of income and food.{fast}"
+            fna "We will lose our hunting grounds for fish and deer, that is our source of income and food.{fast}"
             "Take a note.":
                 $ add_to_journal("We will lose our hunting grounds for fish and deer, that is our source of income and food.")
             "Skip.":
                 pass
-        fna "It will destroy the nature beauty of the river."
+        fna "It will destroy the natural beauty of the river."
         p "So it is more than just cultural reason?"
         fna "Of course it is more than just cultural reasons."
         fna "Some people just want a dam to boost their economy."
-        fna "They don't really care about the land, the water, or the skies."
+        fna "They don't really care about the land, the water, or the air."
         fna "That is why we will use the power of our treaties in the court of law to resist the constuction of the dam."
         p "I understand your reasoning."
-        p "Thank you for helping understand your persepctive."
+        p "Thank you for helping me understand your persepctive."
         fna "You're welcome, I hope you can help us stop the construction of that dam."
         p "I'll see what I can do."
         p "Good bye."
@@ -452,7 +450,8 @@ label fnr:
         with fade
         $ been_fnr = True
         show fnafor 
-        fnf "Excuse me."
+
+        fnf "Excuse me." with dissolve
         p "Yes?"
         fnf "I would like to provide my opinion on the dam."
         p "Yes, I would love to hear your opinion."
@@ -462,10 +461,12 @@ label fnr:
         p "Does that mean you support building the dam?"
         fnf "Yes, I do support building the dam."
         p "Why?"
+
+
         fnf "Building the dam will provide jobs and contracts to First Nations."
         window show
         menu:
-            "Building the dam will provide jobs and contracts to First Nations.{fast}"
+            fnf "Building the dam will provide jobs and contracts to First Nations.{fast}"
             "Take a note.":
                 $ add_to_journal("Building the dam will provide jobs and contracts to First Nations..")
             "Skip.":
@@ -476,7 +477,7 @@ label fnr:
         fnf "Yes, the dam will remove our communities dependence on diesel oil for power."
         window show
         menu:
-            "Yes, the dam will remove our communities dependence on diesel oil for power.{fast}"
+            fnf "Yes, the dam will remove our communities dependence on diesel oil for power.{fast}"
             "Take a note.":
                 $ add_to_journal("Yes, the dam will remove our communities dependence on diesel oil for power.")
             "Skip.":
@@ -489,17 +490,18 @@ label fnr:
         fnf "The dam will provides reliable energy."
         window show
         menu:
-            "The dam will provides reliable energy.{fast}"
+            fnf "The dam will provides reliable energy.{fast}"
             "Take a note.":
                 $ add_to_journal("The dam will provides reliable energy.")
             "Skip.":
                 pass
-        window hide
+        
         p "Well, thank you for sharing that with me."
         fnf "That's all I wanted to say."
         fnf "Thanks for listening"
         p "No problem, thank you for sharing."
         fnf "Bye."
+        window hide
         hide fnafor
         call screen fnr_options
 
@@ -542,7 +544,7 @@ label map_en:
     $ current_room = 'map_en'
     scene map_background
     with fade
-    pause 1.0
+    pause 0.4
     jump text_after_first_nations
     # with fade
     # p "Right, let's head to the University of Toronto to talk to some experts about the dam."
@@ -558,9 +560,9 @@ label map_en_continued:
 
 label text_after_first_nations:
     # nvl_narrator "(⁄ ⁄•⁄ω⁄•⁄ ⁄)   (´｡• ᵕ •｡`) ♡"
-    nvl_mode "*Bzt* *Bzt*"
+    nvl_mode "*Bzt* *Bzt*" with dissolve
     play sound "audio/ReceiveText.ogg"
-    f_nvl "They're some really smart professor at UofT that would love to chat."
+    f_nvl "They're some really smart professor at UofT that would love to chat." with dissolve
     play sound "audio/SendText.ogg"
     p_nvl "Oh really, who?"
     play sound "audio/ReceiveText.ogg"
@@ -584,8 +586,10 @@ screen map_lab:
 label lab_reception:
     $ current_room = 'lab_reception'
     scene backgroundlabfront
-    show lab_rec with dissolve
-    "I head to the front desk at the University of Toronto's Environmental Science Department."
+    show lab_rec 
+    with dissolve
+    "I head to the front desk at the University of Toronto's Environmental Science Department." with dissolve
+
     p "Hello"
 
     lab_rec "Hi, How can I assist you today?"
@@ -600,12 +604,15 @@ label lab_reception:
 label lab_professor_engels:
     $ current_room = 'lab_professor_engels'
     scene backgroundlab1
+    with fade
     show efor with dissolve
     $ pros_done = False
     $ cons_done = False
     window show
 
-    "I knock on Professor Swift's door and enter. She's sitting at her desk surrounded by research papers."
+    "I knock on Professor Engels's door and enter."
+
+    "It looks like he is doing an experiment."
     
     efor "Ah hello, come on in. How can I help you today?"
 
@@ -618,6 +625,7 @@ label lab_professor_engels:
     efor "Shall we first talk about the pros or the cons?"
 
     menu:
+        efor "Shall we first talk about the pros or the cons?{fast}"
         "Pros":
             jump efor_pros
 
@@ -656,7 +664,7 @@ label efor_pros:
 
     p "Why is that such a big deal?"
 
-    efor "Fossil fuels, like coal and oil, have several serous problems."
+    efor "Sources of energy like fossil fuels and coal, have several serous problems."
 
     efor "They trap heat in our atmosphere, which contributes to global warming."
 
@@ -664,41 +672,40 @@ label efor_pros:
 
     efor "Yes, it's a global crisis." 
     
-    efor "By switching to cleaner energy source like hyrdo-power, we can significantly reduce greenhouse gas emissions."
-    window show
+    efor "By switching to cleaner energy source like hydro-power, we can significantly reduce greenhouse gas emissions."
+    
     menu:
-        "By switching to cleaner energy source like hyrdo-power, we can significantly reduce greenhouse gas emissions.{fast}"
+        efor "By switching to cleaner energy source like hydro-power, we can significantly reduce greenhouse gas emissions.{fast}"
         "Take a note.":
-            $ add_to_journal("By switching to cleaner energy source like hyrdo-power, we can significantly reduce greenhouse gas emissions.")
+            $ add_to_journal("By switching to cleaner energy source like hydro-power, we can significantly reduce greenhouse gas emissions.")
         "Skip.":
             pass
 
-    efor "Another issue with fossil fuels is oil spill."
+    efor "Another issue with fossil fuels are oil spills."
 
     efor "Oil spills contaminate water, killing wildlife and leaving entire areas without clean drinking water."
-    window show
+    
     menu:
-        "Oil spills contaminate water, killing wildlife and leaving entire areas without clean drinking water.{fast}"
+        efor "Oil spills contaminate water, killing wildlife and leaving entire areas without clean drinking water.{fast}"
         "Take a note.":
             $ add_to_journal("Oil spills contaminate water, killing wildlife and leaving entire areas without clean drinking water.")
         "Skip.":
             pass
-
+    
     p "So dams would mean no more oil spills?"
 
-    efor "Exactly. Instead of relying on oil, hydro-electric dams harness the constant flow of water to generate energy."
+    efor "Exactly. Instead of relying on fossil fuels, hydro-electric dams harness the constant flow of water to generate energy."
 
     p "Reliable energy sounds great. Fossil fuels don't seem so reliable with all the risks."
 
     efor "With hydro-power, communities get a steady supply of energy without the dangers that come with burning coal or drilling for oil."
-    window show
+    
     menu:
-        "With hydro-power, communities get a steady supply of energy without the dangers that come with burning coal or drilling for oil.{fast}"
+        efor "With hydro-power, communities get a steady supply of energy without the dangers that come with burning coal or drilling for oil.{fast}"
         "Take a note.":
             $ add_to_journal("With hydro-power, communities get a steady supply of energy without the dangers that come with burning coal or drilling for oil.")
         "Skip.":
             pass
-    window hide
 
     p "Yes, it's cleaner and more sustainable."
 
@@ -712,15 +719,15 @@ label efor_cons:
     $ current_room = 'lab_professor_engels'
     scene backgroundlab1
     show efor
-
+    window show
     efor "There are downsides to building the dam."
 
     efor "For one.."
     
     efor "Dams disrupt wildlife. Rivers are home to many species, and blocking them can harm ecosystems."
-    window show
+    
     menu:
-        "Dams disrupt wildlife. Rivers are home to many species, and blocking them can harm ecosystems.{fast}"
+        efor "Dams disrupt wildlife. Rivers are home to many species, and blocking them can harm ecosystems.{fast}"
         "Take a note.":
             $ add_to_journal("Dams disrupt wildlife. Rivers are home to many species, and blocking them can harm ecosystems.")
         "Skip.":
@@ -733,9 +740,9 @@ label efor_cons:
     efor "Another issue is flooding."
     
     efor "Dams often flood nearby areas, and decomposing plants release methane gas."
-    window show
+    
     menu:
-        "Dams often flood nearby areas, and decomposing plants release methane gas.{fast}"
+        efor "Dams often flood nearby areas, and decomposing plants release methane gas.{fast}"
         "Take a note.":
             $ add_to_journal("Dams often flood nearby areas, and decomposing plants release methane gas.")
         "Skip.":
@@ -748,19 +755,18 @@ label efor_cons:
     efor "Lastly,"
     
     efor "Dams contribute to industrialization. They make energy cheaper, which leads to more factories and pollution."
-    window show
+    
     menu:
-        "Dams contribute to industrialization. They make energy cheaper, which leads to more factories and pollution.{fast}"
+        efor "Dams contribute to industrialization. They make energy cheaper, which leads to more factories and pollution.{fast}"
         "Take a note.":
             $ add_to_journal("Dams contribute to industrialization. They make energy cheaper, which leads to more factories and pollution.")
         "Skip.":
             pass
-    window hide
 
     p "So even though they’re greener, they can cause long-term harm?"
 
     p "It seems like Dams solve some problems but create others."
-
+    
     efor "Exactly."
 
     $ cons_done = True
@@ -864,11 +870,14 @@ label office_wait:
     $ current_room = "office_wait"
     scene backgroundofficefront
 
-    p "Now I need to wait until I get to speak with the politician."
+    "Now I need to wait until I get to speak with the politician."
 
     # Wait for some time, add suspense with a short pause or change in the environment
     play music "audio/waiting_music.mp3"
-    p "The office is quiet, and the tension feels thick in the air. I wonder what the politician will say."
+
+    "The office is eerily quiet, with only the faint ticking of a clock on the wall"
+
+    "I wonder, what will the politician say?"
 
     # Next interaction with a normal person
     show np with dissolve
@@ -897,49 +906,128 @@ label office_wait_continue:
     $ current_room = "office_wait_continue"
     scene backgroundoffice
     show pol with dissolve
-    p "Finally, I get to meet the politician."
+    window show
+    p "Hello, Mr. Ford."
 
-    # Politician starts speaking
+    pol "Good afternoon. How can I help you?"
 
-    pol "Ah, I see you're here to discuss the dam situation. Let me tell you, it's going to be a great thing for the community."
+    p "My name is Evelyn, and I'd like to ask about the hydroelectric dam proposal on Una River."
+    p "Why do you want to build it?"
 
-    pol "The dam will provide us with more energy, create jobs, and boost the local economy. People don't understand how much it can benefit everyone."
+    pol "It's a big project, and it will cost a lot, but it's an investment in our future"
 
-    pol "I know some people are concerned about the environment, but honestly, the positives outweigh the negatives. There's a reason why this project is moving forward."
+    p "If it's so expensive, why is it worth building?"
+
+    pol "The dam will provide Ontario with clean, renewable energy."
 
     menu:
-        "Ask about environmental concerns":
-            pol "The environment? Please, we're using the best technology available to ensure minimal impact. It's a small price to pay for progress."
+        pol "The dam will provide Ontario with clean, renewable energy.{fast}"
+        "Take a note.":
+            $ add_to_journal("The dam will provide Ontario with clean, renewable energy.")
+        "Skip.":
+            pass
+    
+    pol "It will help reduce emissions and meet climate targets."
+    
+    menu:
+        pol "It will help reduce emissions and meet climate targets.{fast}"
+        "Take a note.":
+            $ add_to_journal("It will help reduce emissions and meet climate targets.")
+        "Skip.":
+            pass
 
-            $ add_to_journal("Politician downplays environmental concerns and emphasizes the benefits of the dam.")
+    pol "This project shows we're serious about climate leadership."
 
-            jump office_exit
+    p "So it's about moving away from fossil fuels?"
 
-        "Agree with the politician":
-            pol "I knew you would understand. We need this dam to move forward for the future of our community."
+    pol "Precisely. Many communities still rely on diesel fuel, which is harmful and unreliable."
 
-            $ add_to_journal("Politician discusses the benefits of the dam with the player.")
+    pol "The dam will replace that with a sustainable energy source."
 
-            jump office_exit
+    p "Are there any other benefits?"
 
-        "Disagree with the politician":
-            pol "You're entitled to your opinion, but the decision has already been made. The dam will be built, whether you like it or not."
+    pol "Yes. Building the dam will create jobs and boost local economies."
+    
+    pol "In northern and rural Ontario, it will drive development in underutilized areas."
+    
+    pol "It will also stabilize electricity costs for both businesses and households."
 
-            # Politician becomes angry and the player can't get more information
-            $ add_to_journal("Politician becomes frustrated with the player and refuses to provide more details.")
+    p "That sounds helpful for the economy. What about the environment?"
 
-            jump office_exit
+    pol "We’re working closely with Indigenous communities to ensure environmental protections."
+    
+    pol "Modern dam designs minimize ecosystem disruption and respect traditional land use."
+    
+    menu:
+        pol "Modern dam designs minimize ecosystem disruption and respect traditional land use..{fast}"
+        "Take a note.":
+            $ add_to_journal("Modern dam designs minimize ecosystem disruption and respect traditional land use.")
+        "Skip.":
+            pass
+    
+    pol "This project supports reconciliation and responsible development."
+
+    p "So it’s about clean energy, jobs, and working with Indigenous communities?"
+
+    pol "Exactly. The dam will benefit Ontario in many ways."
+    
+    pol "It’s about securing a sustainable and affordable future for everyone."
+
+    p "Thank you for explaining."
+
+    pol "I hope the community sees the benefits too."
+
+    p "Goodbye."
+
+    pol "Goodbye, and thank you for asking the important questions."
+    window hide
+
+    jump office_exit
+    # p "Finally, I get to meet the politician."
+
+    # # Politician starts speaking
+
+    # pol "Ah, I see you're here to discuss the dam situation. Let me tell you, it's going to be a great thing for the community."
+
+    # pol "The dam will provide us with more energy, create jobs, and boost the local economy. People don't understand how much it can benefit everyone."
+
+    # pol "I know some people are concerned about the environment, but honestly, the positives outweigh the negatives. There's a reason why this project is moving forward."
+
+    # menu:
+    #     "Ask about environmental concerns":
+    #         pol "The environment? Please, we're using the best technology available to ensure minimal impact. It's a small price to pay for progress."
+
+    #         $ add_to_journal("Politician downplays environmental concerns and emphasizes the benefits of the dam.")
+
+    #         jump office_exit
+
+    #     "Agree with the politician":
+    #         pol "I knew you would understand. We need this dam to move forward for the future of our community."
+
+    #         $ add_to_journal("Politician discusses the benefits of the dam with the player.")
+
+    #         jump office_exit
+
+    #     "Disagree with the politician":
+    #         pol "You're entitled to your opinion, but the decision has already been made. The dam will be built, whether you like it or not."
+
+    #         # Politician becomes angry and the player can't get more information
+    #         $ add_to_journal("Politician becomes frustrated with the player and refuses to provide more details.")
+
+    #         jump office_exit
 
 label office_exit:
     scene map_background
-    p "I think it's time to head back. The meeting at the town hall is coming up, and I need to be prepared."
+    with fade
+    p "I think it's time to head back. The meeting at the town hall is coming up, and I need to be prepared." with dissolve
     jump map_town
 
 #TOWNHALL 
 label map_town:
     $ current_room = 'map'
     scene map_background
-    p "Now, it is time for you to vote!"
+    with fade 
+    p "Now, it is time for you to vote!" with dissolve
     call screen map_tn
     jump tn_room
 
