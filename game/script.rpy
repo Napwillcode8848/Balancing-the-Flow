@@ -1112,5 +1112,83 @@ screen no_checkquiz:
 label task_passed:
     p "Congratulations! You've selected the correct answers and passed the task."
 
+# Here are some of the labels for the endings! Just make sure to connect these to the game :)
+label ending_yes_win:
+    #dam built
+    show black
+    p "After learning so much about the consequences of dam construction."
+    p "I thought it would be for the best if the dam were to be built."
+    p "Turns out, the city council was impressed by my argumentation."
+    p "And agreed with most of my points and evidence."
+    p "So they decided to build the dam."
+    # So I don't really know everyone who's against the dam construction but if i"m missing one, feel free to add it.
+    show fnaagainst
+    fna "I had a feeling that the dam would have been built."
+    fna "..."
+    fna "Listen."
+    fna "While I\'m not very happy with your decision, I can't entirely blame you can I?"
+    fna "Life will become more difficult for my community because of your choice."
+    fna "I hope you\'re happy."
+    jump end
+
+label ending_yes_fail:
+    #dam not built
+    show black
+    p "After learning so much about the consequences of dam construction."
+    p "I thought it would be for the best if the dam were to be built."
+    p "However, the city council wasn't convinced by my argumentation."
+    p "Turns out not paying attention to what people say has consequences..."
+    p "The council decided to not build the dam instead."
+    show fnafor
+    fnf "I guess I\'ll just stick to working far from my community."
+    p "Why exactly do you need to do that?"
+    fnf "I was counting on the dam being built, on there being more jobs closer to home."
+    fnf "That would have been the best outcome for me and my family."
+    p "I\'m sorry."
+    fnf "It\'s not your fault. Really. I don\'t blame you."
+    fnf "Just... Next time you ask for other people\'s opinions."
+    fnf "Maybe listen to them properly?"
+    hide fnafor
+    show pol
+    pol "I\'ll be real honest."
+    pol "I\'m not exactly happy with this outcome."
+    pol "But at the very least, you tried."
+    hide pol
+    jump end
+
+label ending_no_win:
+    #dam not built
+    show black
+    p "After learning so much about the consequences of dam construction."
+    p "I thought it would be for the best if the dam were not to be built."
+    p "Turns out, the city council was impressed by my argumentation."
+    p "And agreed with most of my points and evidence."
+    p "So they decided not to build the dam."
+    show pol
+    pol "I had a feeling that letting you into my office was a mistake."
+    pol "I had confidence in you. I believed that you could do this ONE thing for me."
+    pol "Now because of you, I need to figure out different ways to meet out climate targets."
+    pol "Thanks a lot for that."
+    pol "I don't have time for this anymore. Goodbye."
+    hide pol
+
+label ending_no_fail:
+    #dam built
+    show black
+    p "After learning so much about the consequences of dam construction."
+    p "I thought it would be for the best if the dam were not to be built."
+    p "However, the city council wasn't convinced by my argumentation."
+    p "Turns out not paying attention to what people say has consequences..."
+    p "The council decided to build the dam instead."
+    show fnaagainst
+    fna "I had a feeling that the dam would have been built."
+    fna "..."
+    fna "Listen."
+    fna "While I'm not very happy with your decision, I can't entirely blame you can I?"
+    fna "Life will become more difficult for my community because of your choice."
+    fna "I HOPE you're happy."
+    hide fnaagainst
+    jump end
+
 label end:
     return
