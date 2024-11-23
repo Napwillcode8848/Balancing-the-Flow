@@ -36,7 +36,6 @@ define config.nvl_adv_transition = Dissolve(0.3)
 #Checkpoint quiz varibles
 default selected_options = []
 
-
 #SET PYTHON FUNCTIONS
 init python: 
     def add_to_journal(dialogue):
@@ -55,7 +54,15 @@ init python:
     def check_answers_yes():
         # All correct points for proposition
         correct_answers = [
-            "Another information bla bla"
+            "Building the dam will provide jobs and contracts to First Nations.",
+            "The dam will remove our communities dependence on diesel oil for power.",
+            "We will lose our hunting grounds for fish and deer, that is our source of income and food.",
+            "By switching to cleaner energy source like hydro-power, we can significantly reduce greenhouse gas emissions.",
+            "Oil spills contaminate water, killing wildlife and leaving entire areas without clean drinking water.",
+            "With hydro-power, communities get a steady supply of energy without the dangers that come with burning coal or drilling for oil.",
+            "The dam will provide Ontario with clean, renewable energy.",
+            "It will help reduce emissions and meet climate targets.",
+            "Modern dam designs minimize ecosystem disruption and respect traditional land use."
         ]
         if sorted(selected_options) == sorted(correct_answers):
             renpy.hide_screen("yes_checkquiz")
@@ -67,7 +74,12 @@ init python:
     def check_answers_no():
         # All correct points for opposition
         correct_answers = [
-            "Another information bla bla"
+            "Our ancestors lived along these waters. The river is our life, blood and spirit.",
+            "Secondly, these dams drown our lands, erasing our history and future.",
+            "We will lose our hunting grounds for fish and deer, that is our source of income and food.",
+            "Dams disrupt wildlife. Rivers are home to many species, and blocking them can harm ecosystems.",
+            "Dams often flood nearby areas, and decomposing plants release methane gas.",
+            "Dams contribute to industrialization. They make energy cheaper, which leads to more factories and pollution.",
         ]
         if sorted(selected_options) == sorted(correct_answers):
             renpy.hide_screen("no_checkquiz")
@@ -228,7 +240,7 @@ screen bd_press:
     #door
     imagebutton:
         align(0.85, 0.36)
-        idle "door.png"
+        idle "door_yellow.png"
         hover "door_hover.png"
         action Jump("map_fn")
     #image_frame
@@ -468,7 +480,7 @@ label fnr:
         menu:
             fnf "Building the dam will provide jobs and contracts to First Nations.{fast}"
             "Take a note.":
-                $ add_to_journal("Building the dam will provide jobs and contracts to First Nations..")
+                $ add_to_journal("Building the dam will provide jobs and contracts to First Nations.")
             "Skip.":
                 pass
         fnf "This could be a really big boost to our economy."
@@ -479,7 +491,7 @@ label fnr:
         menu:
             fnf "Yes, the dam will remove our communities dependence on diesel oil for power.{fast}"
             "Take a note.":
-                $ add_to_journal("Yes, the dam will remove our communities dependence on diesel oil for power.")
+                $ add_to_journal("The dam will remove our communities dependence on diesel oil for power.")
             "Skip.":
                 pass
         p "You use diesel fuel to power your community?"
@@ -860,10 +872,6 @@ label office:
             p "I don't want to show my ID right now."
 
             s "I'm afraid I can't let you through without proper identification."
-
-            # Add journal entry about refusal
-            $ add_to_journal("Refused to give government ID to receptionist.")
-
             jump office_exit
 
 label office_wait:
@@ -880,7 +888,7 @@ label office_wait:
     "I wonder, what will the politician say?"
 
     # Next interaction with a normal person
-    show np with dissolve
+    show env_guy with dissolve
 
     np "You know, everyone has their own thoughts on this whole dam situation."
 
@@ -896,8 +904,6 @@ label office_wait:
 
         "Stay silent and listen":
             np "Yeah... Well, no one really wants to listen to us regular folks anyway. Politicians only care about their votes."
-
-            $ add_to_journal("Stayed silent while a normal person talked about the dam situation.")
 
             jump office_wait_continue
 
@@ -967,22 +973,35 @@ label office_wait_continue:
     
     pol "This project supports reconciliation and responsible development."
 
-    p "So it’s about clean energy, jobs, and working with Indigenous communities?"
+    menu:
+        "Hmm, what should I say..."
+        "I can't believe anything you say":
+            hide pol
+            show pol_angry
+            pol "What is that suppose to mean?"
+            p "You pretend like everything is perfect in your world."
+            p "You refuse to acknowledge their could be bad to hydro-electric dams."
+            pol "Though there are valid concerns, the economic and environmental benefits of this dam are too significant to ignore."
+            pol "Please leave my office. I am very busy."
+            jump map_town
+            window hide
 
-    pol "Exactly. The dam will benefit Ontario in many ways."
+        "So it’s about clean energy, jobs, and working with Indigenous communities?":
+            pol "Exactly. The dam will benefit Ontario in many ways."
     
-    pol "It’s about securing a sustainable and affordable future for everyone."
+            pol "It’s about securing a sustainable and affordable future for everyone."
 
-    p "Thank you for explaining."
+            p "Thank you for explaining."
 
-    pol "I hope the community sees the benefits too."
+            pol "I hope the community sees the benefits too."
 
-    p "Goodbye."
+            p "Goodbye."
 
-    pol "Goodbye, and thank you for asking the important questions."
-    window hide
+            pol "Goodbye, and thank you for asking the important questions."
+            jump map_town
+            window hide
 
-    jump office_exit
+    jump map_town
     # p "Finally, I get to meet the politician."
 
     # # Politician starts speaking
@@ -1016,32 +1035,30 @@ label office_wait_continue:
 
     #         jump office_exit
 
-label office_exit:
-    scene map_background
-    with fade
-    p "I think it's time to head back. The meeting at the town hall is coming up, and I need to be prepared." with dissolve
-    jump map_town
-
 #TOWNHALL 
 label map_town:
+    window hide
     $ current_room = 'map'
     scene map_background
     with fade 
-    p "Now, it is time for you to vote!" with dissolve
+    "It's time to vote." with dissolve
+    "Go to town hall."
     call screen map_tn
     jump tn_room
 
 screen map_tn:
     #neighborhood
     imagebutton:
-        align(0.785, 0.726)
+        align(0.783, 0.723)
         idle "map_townhall.png"
         hover "map_townhall_hover.png"
         action Jump("tn_room")
 
 label tn_room:
+    window hide
     $ current_room = "town_hall"
     scene bk_townhall
+    play sound intersteller
     p "After gathering all the evidence, it's time to present my decision."
     p "The town hall is buzzing with discussions from all sides."
     np "Welcome to the council meeting. Today, we will vote on whether to construct The Great Ontartio Dam. Your voices will help determine the future of our community and the environment."
@@ -1081,9 +1098,12 @@ screen yes_checkquiz:
                 xalign 0.5
                 yalign 0.5
                 spacing 10  # Space between buttons
+                null height 15
                 text "My Journal" size 30 xalign 0.5 color "#FF5733"
                 for entry in journal_entries:
-                    textbutton entry action [Function(ToggleSelected, entry)]
+                    hbox:
+                        null width 25
+                        textbutton entry action [Function(ToggleSelected, entry)]
                 textbutton "Check Answers" action [Function(check_answers_yes)]
 
 screen no_checkquiz:
@@ -1104,9 +1124,12 @@ screen no_checkquiz:
                 xalign 0.5
                 yalign 0.5
                 spacing 10  # Space between buttons
+                null height 15
                 text "My Journal" size 30 xalign 0.5 color "#FF5733"
                 for entry in journal_entries:
-                    textbutton entry action [Function(ToggleSelected, entry)]
+                    hbox:
+                        null width 25
+                        textbutton entry action [Function(ToggleSelected, entry)]
                 textbutton "Check Answers" action [Function(check_answers_no)]
 
 label task_passed:

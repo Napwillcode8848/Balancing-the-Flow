@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 274: reached end of line when expecting ':'.
-    if (been_fnl) and (been_fnr)
-                                ^
-
-File "game/script.rpy", line 276: expected statement.
-    elif fn_status:
-                  ^
-
-File "game/script.rpy", line 285: expected statement.
-    else:
-        ^
+File "game/script.rpy", line 1109: 'margin' is not a keyword argument or valid child of the text statement.
+    text "My Journal" size 30 xalign 0.5 color "#FF5733" margin [20, 0, 20, 0]  
+                                                               ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Tue Nov 19 10:07:47 2024
+Fri Nov 22 22:47:50 2024
