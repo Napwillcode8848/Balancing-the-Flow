@@ -1,22 +1,66 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 290, in script
-    jump choicesfnsta
-ScriptError: could not find label 'choicesfnsta'.
+  File "game/script.rpy", line 1085, in script
+    call screen voting_buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 1131, in execute
+    screen no_checkquiz:
+  File "game/script.rpy", line 1131, in execute
+    screen no_checkquiz:
+  File "game/script.rpy", line 1133, in execute
+    if jounral_entries == []:
+  File "game/script.rpy", line 1133, in <module>
+    if jounral_entries == []:
+NameError: name 'jounral_entries' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 290, in script
-    jump choicesfnsta
-  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1699, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/Applications/renpy-8.3.2-sdk/renpy/script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'choicesfnsta'.
+  File "game/script.rpy", line 1085, in script
+    call screen voting_buttons
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1974, in execute
+    self.call("execute")
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/exports/statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Applications/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 1131, in execute
+    screen no_checkquiz:
+  File "game/script.rpy", line 1131, in execute
+    screen no_checkquiz:
+  File "game/script.rpy", line 1133, in execute
+    if jounral_entries == []:
+  File "game/script.rpy", line 1133, in <module>
+    if jounral_entries == []:
+NameError: name 'jounral_entries' is not defined
 
 macOS-14.6.1-arm64-arm-64bit arm64
 Ren'Py 8.3.2.24090902
 Balancing the flow 1.0
-Tue Nov 19 10:30:20 2024
+Fri Nov 22 23:50:38 2024

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1109: 'margin' is not a keyword argument or valid child of the text statement.
-    text "My Journal" size 30 xalign 0.5 color "#FF5733" margin [20, 0, 20, 0]  
-                                                               ^
+File "game/script.rpy", line 1045: expected statement.
+    journal_entries.append('I have evidence to support my decision.')
+                                                                     ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Fri Nov 22 22:47:50 2024
+Sat Nov 23 00:11:24 2024

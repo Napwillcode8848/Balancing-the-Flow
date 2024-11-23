@@ -56,7 +56,6 @@ init python:
         correct_answers = [
             "Building the dam will provide jobs and contracts to First Nations.",
             "The dam will remove our communities dependence on diesel oil for power.",
-            "We will lose our hunting grounds for fish and deer, that is our source of income and food.",
             "By switching to cleaner energy source like hydro-power, we can significantly reduce greenhouse gas emissions.",
             "Oil spills contaminate water, killing wildlife and leaving entire areas without clean drinking water.",
             "With hydro-power, communities get a steady supply of energy without the dangers that come with burning coal or drilling for oil.",
@@ -64,12 +63,19 @@ init python:
             "It will help reduce emissions and meet climate targets.",
             "Modern dam designs minimize ecosystem disruption and respect traditional land use."
         ]
-        if sorted(selected_options) == sorted(correct_answers):
+        correct_answer = 0
+        for option in selected_options:
+            if option in correct_answers:
+                correct_answer = correct_answer + 1
+            else:
+                correct_answer = correct_answer - 1
+
+        if correct_answer >= 3:
             renpy.hide_screen("yes_checkquiz")
-            renpy.jump("task_passed")
+            renpy.jump("ending_yes_win")
         else:
-            renpy.notify("Incorrect or incomplete selection. Try again.")
-            selected_options.clear()  # Clear selections if incorrect
+            renpy.hide_screen("yes_checkquiz")
+            renpy.jump("ending_yes_fail")
 
     def check_answers_no():
         # All correct points for opposition
@@ -81,12 +87,20 @@ init python:
             "Dams often flood nearby areas, and decomposing plants release methane gas.",
             "Dams contribute to industrialization. They make energy cheaper, which leads to more factories and pollution.",
         ]
-        if sorted(selected_options) == sorted(correct_answers):
+        correct_answer = 0
+        for option in selected_options:
+            if option in correct_answers:
+                correct_answer = correct_answer + 1
+            else:
+                correct_answer = correct_answer - 1
+
+        if correct_answer >= 3:
             renpy.hide_screen("no_checkquiz")
-            renpy.jump("task_passed")
+            renpy.jump("ending_no_win")
         else:
-            renpy.notify("Incorrect or incomplete selection. Try again.")
-            selected_options.clear()  # Clear selections if incorrect
+            renpy.hide_screen("no_checkquiz")
+            renpy.jump("ending_no_fail")
+
 #ZOOMING IMAGE
 transform double_size:
     # how to use it: show image_name at double_size
@@ -361,7 +375,7 @@ label fnl:
         show fnaagainst at double_size
         fna "Hello and welcome."
         fna "What brings you here?"
-        p "Hello, my name is Evelyn, and I'm here to ask you..."
+        p "Hello, my name is Dwayne, and I'm here to ask you..."
         p "Umm.. What do you think about the plan to build a dam on the nearby river?"
         fna "Ahh, I see why you're here"
         fna "You want us to give up our land, so you..."
@@ -578,7 +592,7 @@ label text_after_first_nations:
     play sound "audio/SendText.ogg"
     p_nvl "Oh really, who?"
     play sound "audio/ReceiveText.ogg"
-    f_nvl "A friend of mine, Professor Engels. He has a PHD in environmental studies."
+    f_nvl "A friend of mine, Professor Engels. She has a PHD in environmental studies."
     play sound "audio/SendText.ogg"
     p_nvl "Okay, I'll head there now."
     play sound "audio/ReceiveText.ogg"
@@ -606,7 +620,7 @@ label lab_reception:
 
     lab_rec "Hi, How can I assist you today?"
 
-    p "I'm here to speak with Professor Engels. He should be expecting me."
+    p "I'm here to speak with Professor Engels. She should be expecting me."
 
     lab_rec "Professor Engels office is located in room 310."
 
@@ -824,7 +838,7 @@ label lab_reception3:
     $ current_room = 'lab_reception'
     scene backgroundlabfront
     show lab_rec with dissolve
-    lab_rec "Ah, finally! Professor Green is available now. You can speak with her about the dam's impact."
+    lab_rec "Ah, finally! Professor Green is available now. You can speak with  about the dam's impact."
     jump lab_professor_green
 
 
@@ -855,13 +869,13 @@ label office:
     show office_rec with dissolve
     s "Good morning, sir. May I have your name and ID, please?"
 
-    "If I want to speak with the politican, I should give her my ID."
+    "If I want to speak with the politican, I should give  my ID."
 
     menu:
-        "If I want to speak with the politican, I should give her my ID. {fast}"
+        "If I want to speak with the politican, I should give  my ID. {fast}"
         "Give my government ID":
             # Show the Government ID from the inventory
-            $ government_id = "phone_background.png"
+            $ government_id = "government_id.png"
             show image government_id at half_size
             p "Here is my government ID. I work for the government."
 
@@ -872,7 +886,7 @@ label office:
             p "I don't want to show my ID right now."
 
             s "I'm afraid I can't let you through without proper identification."
-            jump office_exit
+            jump map_town
 
 label office_wait:
     $ current_room = "office_wait"
@@ -917,7 +931,7 @@ label office_wait_continue:
 
     pol "Good afternoon. How can I help you?"
 
-    p "My name is Evelyn, and I'd like to ask about the hydroelectric dam proposal on Una River."
+    p "My name is Dwayne, and I'd like to ask about the hydroelectric dam proposal on Una River."
     p "Why do you want to build it?"
 
     pol "It's a big project, and it will cost a lot, but it's an investment in our future"
@@ -1002,38 +1016,6 @@ label office_wait_continue:
             window hide
 
     jump map_town
-    # p "Finally, I get to meet the politician."
-
-    # # Politician starts speaking
-
-    # pol "Ah, I see you're here to discuss the dam situation. Let me tell you, it's going to be a great thing for the community."
-
-    # pol "The dam will provide us with more energy, create jobs, and boost the local economy. People don't understand how much it can benefit everyone."
-
-    # pol "I know some people are concerned about the environment, but honestly, the positives outweigh the negatives. There's a reason why this project is moving forward."
-
-    # menu:
-    #     "Ask about environmental concerns":
-    #         pol "The environment? Please, we're using the best technology available to ensure minimal impact. It's a small price to pay for progress."
-
-    #         $ add_to_journal("Politician downplays environmental concerns and emphasizes the benefits of the dam.")
-
-    #         jump office_exit
-
-    #     "Agree with the politician":
-    #         pol "I knew you would understand. We need this dam to move forward for the future of our community."
-
-    #         $ add_to_journal("Politician discusses the benefits of the dam with the player.")
-
-    #         jump office_exit
-
-    #     "Disagree with the politician":
-    #         pol "You're entitled to your opinion, but the decision has already been made. The dam will be built, whether you like it or not."
-
-    #         # Politician becomes angry and the player can't get more information
-    #         $ add_to_journal("Politician becomes frustrated with the player and refuses to provide more details.")
-
-    #         jump office_exit
 
 #TOWNHALL 
 label map_town:
@@ -1059,6 +1041,8 @@ label tn_room:
     $ current_room = "town_hall"
     scene bk_townhall
     play sound intersteller
+    if journal_entries == []:
+        $ journal_entries.append('I have no evidence to support my decision.')
     p "After gathering all the evidence, it's time to present my decision."
     p "The town hall is buzzing with discussions from all sides."
     np "Welcome to the council meeting. Today, we will vote on whether to construct The Great Ontartio Dam. Your voices will help determine the future of our community and the environment."
@@ -1095,20 +1079,25 @@ screen yes_checkquiz:
             draggable True
             scrollbars "vertical" 
             vbox:
+                xsize 600  # Ensure the viewport matches the frame size for proper alignment
+                ysize 0
                 xalign 0.5
                 yalign 0.5
                 spacing 10  # Space between buttons
                 null height 15
                 text "My Journal" size 30 xalign 0.5 color "#FF5733"
+                textbutton "Check Answers" action [Function(check_answers_yes)] xalign 0.5
                 for entry in journal_entries:
                     hbox:
                         null width 25
-                        textbutton entry action [Function(ToggleSelected, entry)]
-                textbutton "Check Answers" action [Function(check_answers_yes)]
+                        $ color = "#00FF00" if entry in selected_options else "#FFFFFF"
+                        textbutton entry action Function(ToggleSelected, entry) text_color color
+                    # textbutton entry action [Function(ToggleSelected, entry)]
+
 
 screen no_checkquiz:
     add "bk_townhall.png"
-
+        
     # Create a frame
     frame:
         align(0.5, 0.5)
@@ -1121,29 +1110,31 @@ screen no_checkquiz:
             draggable True
             scrollbars "vertical" 
             vbox:
+                xsize 600  # Ensure the viewport matches the frame size for proper alignment
+                ysize 0
                 xalign 0.5
                 yalign 0.5
                 spacing 10  # Space between buttons
                 null height 15
                 text "My Journal" size 30 xalign 0.5 color "#FF5733"
+                textbutton "Check Answers" action [Function(check_answers_yes)] xalign 0.5
                 for entry in journal_entries:
                     hbox:
                         null width 25
-                        textbutton entry action [Function(ToggleSelected, entry)]
-                textbutton "Check Answers" action [Function(check_answers_no)]
+                        $ color = "#00FF00" if entry in selected_options else "#FFFFFF"
+                        textbutton entry action Function(ToggleSelected, entry) text_color color
+                # textbutton "Check Answers" action [Function(check_answers_no)]
 
-label task_passed:
-    p "Congratulations! You've selected the correct answers and passed the task."
 
 # Here are some of the labels for the endings! Just make sure to connect these to the game :)
 label ending_yes_win:
     #dam built
     show black
-    p "After learning so much about the consequences of dam construction."
-    p "I thought it would be for the best if the dam were to be built."
-    p "Turns out, the city council was impressed by my argumentation."
-    p "And agreed with most of my points and evidence."
-    p "So they decided to build the dam."
+    "After learning so much about the consequences of dam construction."
+    "I thought it would be for the best if the dam were to be built."
+    "Turns out, the city council was impressed by my argumentation."
+    "And agreed with most of my points and evidence."
+    "So they decided to build the dam."
     # So I don't really know everyone who's against the dam construction but if i"m missing one, feel free to add it.
     show fnaagainst
     fna "I had a feeling that the dam would have been built."
@@ -1157,11 +1148,11 @@ label ending_yes_win:
 label ending_yes_fail:
     #dam not built
     show black
-    p "After learning so much about the consequences of dam construction."
-    p "I thought it would be for the best if the dam were to be built."
-    p "However, the city council wasn't convinced by my argumentation."
-    p "Turns out not paying attention to what people say has consequences..."
-    p "The council decided to not build the dam instead."
+    "After learning so much about the consequences of dam construction."
+    "I thought it would be for the best if the dam were to be built."
+    "However, the city council wasn't convinced by my argumentation."
+    "Turns out not paying attention to what people say has consequences..."
+    "The council decided to not build the dam instead."
     show fnafor
     fnf "I guess I\'ll just stick to working far from my community."
     p "Why exactly do you need to do that?"
@@ -1182,11 +1173,11 @@ label ending_yes_fail:
 label ending_no_win:
     #dam not built
     show black
-    p "After learning so much about the consequences of dam construction."
-    p "I thought it would be for the best if the dam were not to be built."
-    p "Turns out, the city council was impressed by my argumentation."
-    p "And agreed with most of my points and evidence."
-    p "So they decided not to build the dam."
+    "After learning so much about the consequences of dam construction."
+    "I thought it would be for the best if the dam were not to be built."
+    "Turns out, the city council was impressed by my argumentation."
+    "And agreed with most of my points and evidence."
+    "So they decided not to build the dam."
     show pol
     pol "I had a feeling that letting you into my office was a mistake."
     pol "I had confidence in you. I believed that you could do this ONE thing for me."
@@ -1198,11 +1189,11 @@ label ending_no_win:
 label ending_no_fail:
     #dam built
     show black
-    p "After learning so much about the consequences of dam construction."
-    p "I thought it would be for the best if the dam were not to be built."
-    p "However, the city council wasn't convinced by my argumentation."
-    p "Turns out not paying attention to what people say has consequences..."
-    p "The council decided to build the dam instead."
+    "After learning so much about the consequences of dam construction."
+    "I thought it would be for the best if the dam were not to be built."
+    "However, the city council wasn't convinced by my argumentation."
+    "Turns out not paying attention to what people say has consequences..."
+    "The council decided to build the dam instead."
     show fnaagainst
     fna "I had a feeling that the dam would have been built."
     fna "..."

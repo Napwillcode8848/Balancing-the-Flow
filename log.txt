@@ -1,77 +1,18 @@
-2024-11-23 02:46:30 UTC
+2024-11-23 04:03:04 UTC
 macOS-14.6.1-arm64-arm-64bit
 Ren'Py 8.3.2.24090902
 
 Early init took 0.05s
 Loading error handling took 0.03s
-Loading script took 0.22s
-Loading save slot metadata took 0.04s
-Loading persistent took 0.00s
-Running init code took 0.07s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.03s
-Running _start took 0.00s
-Interface start took 0.27s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 235.70s
-Loading error handling took 0.03s
-Loading script took 0.18s
+Loading script took 0.24s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
+
+File "game/script.rpy", line 1107: 'color' is not a keyword argument or valid child of the textbutton statement.
+    textbutton entry action [Function(ToggleSelected, entry)] color "#00FF00"
+                                                                   ^
 DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
+Interface start took 0.29s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1470, 956)
@@ -86,141 +27,65 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 252.63s
-Loading error handling took 0.02s
-Loading script took 0.16s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 524.75s
-Loading error handling took 0.02s
-Loading script took 0.16s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 623.27s
-Loading error handling took 0.02s
-Loading script took 0.16s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 674.91s
+Early init took 42.96s
 Loading error handling took 0.02s
 Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1107: 'color' is not a keyword argument or valid child of the textbutton statement.
+    textbutton entry["text"] action Function(ToggleSelected, entry) color "#00FF00"
+                                                                         ^
+DPI scale factor: 1.000000
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 44.22s
+Loading error handling took 0.02s
+Loading script took 0.12s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
-Running init code took 0.02s
+
+File "game/script.rpy", line 1107: 'color' is not a keyword argument or valid child of the textbutton statement.
+    textbutton entry["text"] action Function(ToggleSelected, entry) color "#00FF00"
+                                                                         ^
+DPI scale factor: 1.000000
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 86.56s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.03s
 Index archives took 0.00s
 Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
 Dump and make backups took 0.04s
@@ -230,7 +95,7 @@ Initial gc took 0.03s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
@@ -253,218 +118,254 @@ Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 700.94s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 716.47s
-Loading error handling took 0.02s
-Loading script took 0.16s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
+Full traceback:
+  File "game/script.rpy", line 1065, in script
+    call screen voting_buttons
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1974, in execute
+    self.call("execute")
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/exports/statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Applications/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    frame:
+  File "game/script.rpy", line 1094, in execute
+    viewport:
+  File "game/script.rpy", line 1097, in execute
+    vbox:
+  File "game/script.rpy", line 1103, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1104, in execute
+    hbox:
+  File "game/script.rpy", line 1106, in execute
+    if entry in selected_options:
+  File "game/script.rpy", line 1107, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color "#00FF00"
+  File "game/script.rpy", line 1107, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color "#00FF00"
+TypeError: string indices must be integers
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 744.19s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
+While running game code:
+  File "game/script.rpy", line 1065, in script
+    call screen voting_buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    frame:
+  File "game/script.rpy", line 1094, in execute
+    viewport:
+  File "game/script.rpy", line 1097, in execute
+    vbox:
+  File "game/script.rpy", line 1103, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1104, in execute
+    hbox:
+  File "game/script.rpy", line 1106, in execute
+    if entry in selected_options:
+  File "game/script.rpy", line 1107, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color "#00FF00"
+  File "game/script.rpy", line 1107, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color "#00FF00"
+TypeError: string indices must be integers
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 758.10s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
+Full traceback:
+  File "game/script.rpy", line 1065, in script
+    call screen voting_buttons
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1974, in execute
+    self.call("execute")
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/exports/statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Applications/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    frame:
+  File "game/script.rpy", line 1094, in execute
+    viewport:
+  File "game/script.rpy", line 1097, in execute
+    vbox:
+  File "game/script.rpy", line 1103, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1104, in execute
+    hbox:
+  File "game/script.rpy", line 1106, in execute
+    if entry in selected_options:
+  File "game/script.rpy", line 1107, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color "#00FF00"
+  File "game/script.rpy", line 1107, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color "#00FF00"
+TypeError: string indices must be integers
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 772.10s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.10s
+While running game code:
+  File "game/script.rpy", line 1065, in script
+    call screen voting_buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    frame:
+  File "game/script.rpy", line 1094, in execute
+    viewport:
+  File "game/script.rpy", line 1097, in execute
+    vbox:
+  File "game/script.rpy", line 1103, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1104, in execute
+    hbox:
+  File "game/script.rpy", line 1106, in execute
+    if entry in selected_options:
+  File "game/script.rpy", line 1107, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color "#00FF00"
+  File "game/script.rpy", line 1107, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color "#00FF00"
+TypeError: string indices must be integers
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
+Full traceback:
+  File "game/script.rpy", line 1065, in script
+    call screen voting_buttons
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1974, in execute
+    self.call("execute")
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/exports/statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Applications/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    frame:
+  File "game/script.rpy", line 1094, in execute
+    viewport:
+  File "game/script.rpy", line 1097, in execute
+    vbox:
+  File "game/script.rpy", line 1103, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1104, in execute
+    hbox:
+  File "game/script.rpy", line 1106, in execute
+    if entry in selected_options:
+  File "game/script.rpy", line 1107, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color "#00FF00"
+  File "game/script.rpy", line 1107, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color "#00FF00"
+TypeError: string indices must be integers
+
+While running game code:
+  File "game/script.rpy", line 1065, in script
+    call screen voting_buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    frame:
+  File "game/script.rpy", line 1094, in execute
+    viewport:
+  File "game/script.rpy", line 1097, in execute
+    vbox:
+  File "game/script.rpy", line 1103, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1104, in execute
+    hbox:
+  File "game/script.rpy", line 1106, in execute
+    if entry in selected_options:
+  File "game/script.rpy", line 1107, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color "#00FF00"
+  File "game/script.rpy", line 1107, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color "#00FF00"
+TypeError: string indices must be integers
 Resetting cache.
-Early init took 2134.85s
+Early init took 199.35s
 Loading error handling took 0.02s
 Loading script took 0.18s
 Loading save slot metadata took 0.03s
@@ -478,7 +379,7 @@ Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow'
 Dump and make backups took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.03s
+Initial gc took 0.04s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
@@ -488,7 +389,7 @@ Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.02s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Interface start took 0.08s
@@ -505,55 +406,91 @@ Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 1065, in script
+    call screen voting_buttons
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1974, in execute
+    self.call("execute")
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/exports/statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Applications/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    frame:
+  File "game/script.rpy", line 1094, in execute
+    viewport:
+  File "game/script.rpy", line 1097, in execute
+    vbox:
+  File "game/script.rpy", line 1103, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1104, in execute
+    hbox:
+  File "game/script.rpy", line 1106, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry)
+  File "game/script.rpy", line 1106, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry)
+TypeError: string indices must be integers
+
+While running game code:
+  File "game/script.rpy", line 1065, in script
+    call screen voting_buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1083, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    frame:
+  File "game/script.rpy", line 1094, in execute
+    viewport:
+  File "game/script.rpy", line 1097, in execute
+    vbox:
+  File "game/script.rpy", line 1103, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1104, in execute
+    hbox:
+  File "game/script.rpy", line 1106, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry)
+  File "game/script.rpy", line 1106, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry)
+TypeError: string indices must be integers
 Resetting cache.
-Early init took 2262.17s
+Early init took 334.09s
 Loading error handling took 0.02s
 Loading script took 0.20s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 2277.54s
-Loading error handling took 0.02s
-Loading script took 0.18s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.02s
+Running init code took 0.03s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.03s
@@ -571,11 +508,130 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 1069, in script
+    call screen voting_buttons
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1974, in execute
+    self.call("execute")
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/exports/statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Applications/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 1087, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1091, in execute
+    frame:
+  File "game/script.rpy", line 1098, in execute
+    viewport:
+  File "game/script.rpy", line 1101, in execute
+    vbox:
+  File "game/script.rpy", line 1107, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1108, in execute
+    hbox:
+  File "game/script.rpy", line 1110, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry)
+  File "game/script.rpy", line 1110, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry)
+TypeError: string indices must be integers
+
+While running game code:
+  File "game/script.rpy", line 1069, in script
+    call screen voting_buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 1087, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1091, in execute
+    frame:
+  File "game/script.rpy", line 1098, in execute
+    viewport:
+  File "game/script.rpy", line 1101, in execute
+    vbox:
+  File "game/script.rpy", line 1107, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1108, in execute
+    hbox:
+  File "game/script.rpy", line 1110, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry)
+  File "game/script.rpy", line 1110, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry)
+TypeError: string indices must be integers
+Resetting cache.
+Early init took 344.97s
+Loading error handling took 0.02s
+Loading script took 0.09s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.08s
+Interface start took 0.06s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1470, 956)
@@ -589,8 +645,86 @@ Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 1069, in script
+    call screen voting_buttons
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1974, in execute
+    self.call("execute")
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/exports/statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Applications/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 1087, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1091, in execute
+    frame:
+  File "game/script.rpy", line 1098, in execute
+    viewport:
+  File "game/script.rpy", line 1101, in execute
+    vbox:
+  File "game/script.rpy", line 1107, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1108, in execute
+    hbox:
+  File "game/script.rpy", line 1110, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry)
+  File "game/script.rpy", line 1110, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry)
+TypeError: string indices must be integers
+
+While running game code:
+  File "game/script.rpy", line 1069, in script
+    call screen voting_buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 1087, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1091, in execute
+    frame:
+  File "game/script.rpy", line 1098, in execute
+    viewport:
+  File "game/script.rpy", line 1101, in execute
+    vbox:
+  File "game/script.rpy", line 1107, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1108, in execute
+    hbox:
+  File "game/script.rpy", line 1110, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry)
+  File "game/script.rpy", line 1110, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry)
+TypeError: string indices must be integers
 Resetting cache.
-Early init took 2419.80s
+Early init took 399.69s
 Loading error handling took 0.02s
 Loading script took 0.18s
 Loading save slot metadata took 0.03s
@@ -632,21 +766,21 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 2486.58s
+Early init took 451.34s
 Loading error handling took 0.02s
-Loading script took 0.18s
-Loading save slot metadata took 0.03s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 Running init code took 0.02s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
+Reloading save slot metadata took 0.02s
 Index archives took 0.00s
 Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
 Dump and make backups took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.04s
+Initial gc took 0.03s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
@@ -674,15 +808,15 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 2526.33s
+Early init took 586.11s
 Loading error handling took 0.02s
-Loading script took 0.14s
+Loading script took 0.15s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 
-File "game/script.rpy", line 1049: 'pause' is not a keyword argument or valid child of the imagebutton statement.
-    pause 120.0
-         ^
+File "game/script.rpy", line 1110: expected a keyword argument, colon, or end of line.
+    textbutton entry action [Function(ToggleSelected, entry)], text_color "#00FF00" if entry in selected_options else "#FFFFFF"
+                                                                          ^
 DPI scale factor: 1.000000
 Interface start took 0.08s
 
@@ -699,10 +833,35 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 2547.56s
+Early init took 596.82s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1111: Line is indented, but the preceding textbutton statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    text_color "#00FF00" if entry in selected_options else "#FFFFFF"
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 670.81s
 Loading error handling took 0.02s
 Loading script took 0.17s
-Loading save slot metadata took 0.02s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 Running init code took 0.04s
 Loading analysis data took 0.01s
@@ -741,158 +900,7 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 3206.38s
-Loading error handling took 0.03s
-Loading script took 0.15s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-
-File "game/script.rpy", line 1068: play requires a file
-    play sound 
-               ^
-DPI scale factor: 1.000000
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3236.67s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3282.30s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3311.30s
-Loading error handling took 0.02s
-Loading script took 0.18s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3319.13s
+Early init took 690.71s
 Loading error handling took 0.02s
 Loading script took 0.15s
 Loading save slot metadata took 0.02s
@@ -919,7 +927,7 @@ Prepare screens took 0.05s
 Save pyanalysis. took 0.02s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.08s
+Interface start took 0.07s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1470, 956)
@@ -934,9 +942,129 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 3336.06s
+Early init took 787.85s
 Loading error handling took 0.02s
-Loading script took 0.16s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 1069, in script
+    call screen voting_buttons
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1974, in execute
+    self.call("execute")
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/exports/statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Applications/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 1087, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1091, in execute
+    frame:
+  File "game/script.rpy", line 1098, in execute
+    viewport:
+  File "game/script.rpy", line 1101, in execute
+    vbox:
+  File "game/script.rpy", line 1107, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1108, in execute
+    hbox:
+  File "game/script.rpy", line 1111, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color color
+  File "game/script.rpy", line 1111, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color color
+TypeError: string indices must be integers
+
+While running game code:
+  File "game/script.rpy", line 1069, in script
+    call screen voting_buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 1087, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1087, in execute
+    screen yes_checkquiz:
+  File "game/script.rpy", line 1091, in execute
+    frame:
+  File "game/script.rpy", line 1098, in execute
+    viewport:
+  File "game/script.rpy", line 1101, in execute
+    vbox:
+  File "game/script.rpy", line 1107, in execute
+    for entry in journal_entries:
+  File "game/script.rpy", line 1108, in execute
+    hbox:
+  File "game/script.rpy", line 1111, in execute
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color color
+  File "game/script.rpy", line 1111, in <module>
+    textbutton entry["text"] action Function(ToggleSelected, entry) text_color color
+TypeError: string indices must be integers
+Resetting cache.
+Early init took 851.57s
+Loading error handling took 0.02s
+Loading script took 0.18s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 Running init code took 0.02s
@@ -976,21 +1104,21 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 3343.93s
+Early init took 919.85s
 Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 Running init code took 0.02s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.03s
 Index archives took 0.00s
 Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
 Dump and make backups took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.03s
+Initial gc took 0.04s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
@@ -1000,7 +1128,56 @@ Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.05s
-Save pyanalysis. took 0.01s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Early init took 1172.68s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.02s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Interface start took 0.08s
@@ -1018,15 +1195,15 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 3372.96s
+Early init took 1372.25s
 Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 Running init code took 0.02s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.03s
 Index archives took 0.00s
 Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
 Dump and make backups took 0.04s
@@ -1045,6 +1222,54 @@ Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Early init took 1694.71s
+Loading error handling took 0.02s
+Loading script took 0.10s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
 Interface start took 0.08s
 
 Initializing gl2 renderer:
@@ -1060,7 +1285,7 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 3427.67s
+Early init took 1702.58s
 Loading error handling took 0.02s
 Loading script took 0.18s
 Loading save slot metadata took 0.03s
@@ -1068,55 +1293,13 @@ Loading persistent took 0.00s
 Running init code took 0.02s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3437.08s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
 Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
 Dump and make backups took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.03s
+Initial gc took 0.04s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
@@ -1126,7 +1309,7 @@ Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Interface start took 0.07s
@@ -1144,510 +1327,7 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 3496.24s
-Loading error handling took 0.02s
-Loading script took 0.16s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3507.09s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3513.47s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3525.87s
-Loading error handling took 0.02s
-Loading script took 0.16s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3559.41s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-
-File "game/script.rpy", line 1109: 'xpadding' is not a keyword argument or valid child of the vbox statement.
-    xpadding 15
-            ^
-DPI scale factor: 1.000000
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3591.23s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-
-File "game/script.rpy", line 1109: 'xpadding' is not a keyword argument or valid child of the vbox statement.
-    xpadding 15
-            ^
-DPI scale factor: 1.000000
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3659.15s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-
-File "game/script.rpy", line 1109: expected a keyword argument, colon, or end of line.
-    text "My Journal" size 30 xalign margin [20, 0, 20, 0] 0.5 color "#FF5733"
-                                                           ^
-DPI scale factor: 1.000000
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3677.43s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-
-File "game/script.rpy", line 1109: 'margin' is not a keyword argument or valid child of the text statement.
-    text "My Journal" size 30 xalign 0.5 color "#FF5733" margin [20, 0, 20, 0]  
-                                                               ^
-DPI scale factor: 1.000000
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3679.13s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-
-File "game/script.rpy", line 1109: 'margin' is not a keyword argument or valid child of the text statement.
-    text "My Journal" size 30 xalign 0.5 color "#FF5733" margin [20, 0, 20, 0]  
-                                                               ^
-DPI scale factor: 1.000000
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3688.37s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3765.71s
-Loading error handling took 0.02s
-Loading script took 0.18s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3787.19s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3795.11s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3819.62s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 4072.19s
+Early init took 1796.53s
 Loading error handling took 0.02s
 Loading script took 0.19s
 Loading save slot metadata took 0.03s
@@ -1670,8 +1350,8 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Interface start took 0.08s
@@ -1689,12 +1369,12 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 4145.02s
+Early init took 1896.81s
 Loading error handling took 0.02s
-Loading script took 0.20s
+Loading script took 0.19s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.02s
+Running init code took 0.03s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.03s
@@ -1715,6 +1395,2366 @@ Save screen analysis took 0.02s
 Prepare screens took 0.06s
 Save pyanalysis. took 0.02s
 Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1946.97s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2003.18s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2067.51s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2072.35s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2188.89s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 73: invalid syntax
+        if correct_answer => 3:
+                           ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2202.60s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2245.54s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Early init took 2455.77s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1118: 'function' is not a keyword argument or valid child of the vbox statement.
+    function(check_answers_yes)
+            ^
+
+File "game/script.rpy", line 1148: 'function' is not a keyword argument or valid child of the vbox statement.
+    function(check_answers_no)
+            ^
+DPI scale factor: 1.000000
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2547.82s
+Loading error handling took 0.03s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1118: 'check_answers_yes' is not a keyword argument or valid child of the vbox statement.
+    check_answers_yes()
+                     ^
+
+File "game/script.rpy", line 1148: 'check_answers_no' is not a keyword argument or valid child of the vbox statement.
+    check_answers_no()
+                    ^
+DPI scale factor: 1.000000
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2550.83s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1118: 'check_answers_yes' is not a keyword argument or valid child of the vbox statement.
+    check_answers_yes()
+                     ^
+
+File "game/script.rpy", line 1148: 'check_answers_no' is not a keyword argument or valid child of the vbox statement.
+    check_answers_no()
+                    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2585.68s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1118: 'jump' is not a keyword argument or valid child of the vbox statement.
+    jump check_answers_yes
+        ^
+
+File "game/script.rpy", line 1148: 'jump' is not a keyword argument or valid child of the vbox statement.
+    jump check_answers_no
+        ^
+DPI scale factor: 1.000000
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2589.30s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1118: 'jump' is not a keyword argument or valid child of the vbox statement.
+    jump check_answers_yes
+        ^
+
+File "game/script.rpy", line 1148: 'jump' is not a keyword argument or valid child of the vbox statement.
+    jump check_answers_no
+        ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2616.58s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1118: 'jump' is not a keyword argument or valid child of the vbox statement.
+    jump check_answers_yes
+        ^
+
+File "game/script.rpy", line 1130: expected a keyword argument or child statement.
+    "You have no evidence"
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2627.29s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1128: expected a keyword argument or child statement.
+    "You have no evidence."
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2628.60s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1128: expected a keyword argument or child statement.
+    "You have no evidence."
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2629.74s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1128: expected a keyword argument or child statement.
+    "You have no evidence."
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2642.00s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1129: Line is indented, but the preceding text statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    jump check_answers_no
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2648.24s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1129: Line is indented, but the preceding text statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    jump check_answers_no
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2650.20s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1129: Line is indented, but the preceding text statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    jump check_answers_no
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2651.13s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1129: Line is indented, but the preceding text statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    jump check_answers_no
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2661.85s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 889, in script
+    jump office_exit
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1699, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/Applications/renpy-8.3.2-sdk/renpy/script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'office_exit'.
+
+While running game code:
+  File "game/script.rpy", line 889, in script
+    jump office_exit
+ScriptError: could not find label 'office_exit'.
+Resetting cache.
+Early init took 2806.43s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2841.59s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 1085, in script
+    call screen voting_buttons
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1974, in execute
+    self.call("execute")
+  File "/Applications/renpy-8.3.2-sdk/renpy/ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/exports/statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Applications/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Applications/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 1131, in execute
+    screen no_checkquiz:
+  File "game/script.rpy", line 1131, in execute
+    screen no_checkquiz:
+  File "game/script.rpy", line 1133, in execute
+    if jounral_entries == []:
+  File "game/script.rpy", line 1133, in <module>
+    if jounral_entries == []:
+NameError: name 'jounral_entries' is not defined
+
+While running game code:
+  File "game/script.rpy", line 1085, in script
+    call screen voting_buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 1131, in execute
+    screen no_checkquiz:
+  File "game/script.rpy", line 1131, in execute
+    screen no_checkquiz:
+  File "game/script.rpy", line 1133, in execute
+    if jounral_entries == []:
+  File "game/script.rpy", line 1133, in <module>
+    if jounral_entries == []:
+NameError: name 'jounral_entries' is not defined
+Resetting cache.
+Early init took 2891.86s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2899.73s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2930.36s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2939.89s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1096: expected a keyword argument or child statement.
+    'hello'
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2979.23s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1097: expected a keyword argument or child statement.
+    'hello'
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2981.07s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1097: expected a keyword argument or child statement.
+    'hello'
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2981.63s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1097: expected a keyword argument or child statement.
+    'hello'
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2982.54s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1097: expected a keyword argument or child statement.
+    'hello'
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2983.13s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1097: expected a keyword argument or child statement.
+    'hello'
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2990.85s
+Loading error handling took 0.02s
+Loading script took 0.08s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3054.62s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1097: expected a keyword argument or child statement.
+    "Hello"
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3096.95s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1097: 'p' is not a keyword argument or valid child of the screen statement.
+    p "Hello"
+     ^
+DPI scale factor: 1.000000
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3099.79s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1097: 'p' is not a keyword argument or valid child of the screen statement.
+    p "Hello"
+     ^
+DPI scale factor: 1.000000
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3106.00s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3110.85s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1096: 'p' is not a keyword argument or valid child of the screen statement.
+    p 'hello'
+     ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3151.73s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1096: 'p' is not a keyword argument or valid child of the screen statement.
+    p 'hello'
+     ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3154.00s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1096: 'p' is not a keyword argument or valid child of the screen statement.
+    p 'hello'
+     ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3158.68s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3380.89s
+Loading error handling took 0.03s
+Loading script took 0.14s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1118: 'jump' is not a keyword argument or valid child of the vbox statement.
+    jump empty_journal_no
+        ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3400.66s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1118: 'call' is not a keyword argument or valid child of the vbox statement.
+    call empty_journal_no
+        ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3402.83s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1118: 'call' is not a keyword argument or valid child of the vbox statement.
+    call empty_journal_no
+        ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3485.85s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3490.70s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3587.67s
+Loading error handling took 0.02s
+Loading script took 0.10s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3722.39s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3731.73s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3754.73s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3765.59s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3775.11s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3779.95s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3810.46s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1087: 'color' is not a keyword argument or valid child of the textbutton statement.
+    textbutton "Check Answers" action Function(check_answers_yes) xalign 0.5 color "#yellow"
+                                                                                  ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3830.23s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1087: 'color' is not a keyword argument or valid child of the textbutton statement.
+    textbutton "Check Answers" action Function(check_answers_yes) xalign 0.5 color "#FFFF00"
+                                                                                  ^
+DPI scale factor: 1.000000
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3831.86s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1087: 'color' is not a keyword argument or valid child of the textbutton statement.
+    textbutton "Check Answers" action Function(check_answers_yes) xalign 0.5 color "#FFFF00"
+                                                                                  ^
+DPI scale factor: 1.000000
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3832.70s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1087: 'color' is not a keyword argument or valid child of the textbutton statement.
+    textbutton "Check Answers" action Function(check_answers_yes) xalign 0.5 color "#FFFF00"
+                                                                                  ^
+DPI scale factor: 1.000000
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3841.92s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3899.58s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3908.97s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3954.58s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3962.43s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4042.78s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1120: 'journal_entries' is not a keyword argument or valid child of the vbox statement.
+    journal_entries.append('I have no supporting evidence.')
+                   ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4053.52s
+Loading error handling took 0.02s
+Loading script took 0.08s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4100.57s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 1045: expected statement.
+    journal_entries.append('I have evidence to support my decision.')
+                                                                     ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4120.32s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4162.90s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 88.1'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4220.99s
+Loading error handling took 0.02s
+Loading script took 0.10s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Interface start took 0.08s
 
