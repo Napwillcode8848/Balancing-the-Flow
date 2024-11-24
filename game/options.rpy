@@ -6,6 +6,7 @@
 
 
 ## Basics ######################################################################
+define config.rollback_enabled = False
 
 ## A human-readable name of the game. This is used to set the default window
 ## title, and shows up in the interface and error reports.

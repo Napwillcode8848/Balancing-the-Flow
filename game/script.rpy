@@ -588,7 +588,7 @@ label text_after_first_nations:
     # nvl_narrator "(⁄ ⁄•⁄ω⁄•⁄ ⁄)   (´｡• ᵕ •｡`) ♡"
     nvl_mode "*Bzt* *Bzt*" with dissolve
     play sound "audio/ReceiveText.ogg"
-    f_nvl "They're some really smart professor at UofT that would love to chat." with dissolve
+    f_nvl "They're some really smart professors at UofT that would love to chat." with dissolve
     play sound "audio/SendText.ogg"
     p_nvl "Oh really, who?"
     play sound "audio/ReceiveText.ogg"
@@ -638,7 +638,7 @@ label lab_professor_engels:
 
     "I knock on Professor Engels's door and enter."
 
-    "It looks like he is doing an experiment."
+    "It looks like she is doing an experiment."
     
     efor "Ah hello, come on in. How can I help you today?"
 
