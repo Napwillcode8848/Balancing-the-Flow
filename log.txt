@@ -1,35 +1,35 @@
-2024-11-26 05:11:19 UTC
+2024-11-26 09:48:57 UTC
 macOS-14.6.1-arm64-arm-64bit
 Ren'Py 8.3.2.24090902
 
 Early init took 0.05s
-Loading error handling took 0.03s
-Loading script took 0.22s
-Loading save slot metadata took 0.04s
+Loading error handling took 0.05s
+Loading script took 0.85s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.03s
+Running init code took 0.05s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
-Backing up script files to '/Users/japleenkaur/Library/RenPy/backups/Untitled':
+Backing up script files to '/Users/aaa/Library/RenPy/backups/Balancing-the-Flow2':
 Dump and make backups took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.03s
+Initial gc took 0.02s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.03s
 Running _start took 0.00s
-Interface start took 0.49s
+Interface start took 0.25s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1470, 956)
@@ -39,7 +39,7 @@ Vendor: "b'Apple'"
 Renderer: b'Apple M2'
 Version: b'2.1 Metal - 88.1'
 Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1470, 852) drawable=(2940, 1704)
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1470, 852) drawable=(2940, 1704)
+Screen sizes: virtual=(1280, 720) physical=(1470, 891) drawable=(2940, 1782)
 Maximum texture size: 4096x4096
