@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1045: expected statement.
-    journal_entries.append('I have evidence to support my decision.')
-                                                                     ^
+File "game/script.rpy", line 278: 'stop' is not a keyword argument or valid child of the screen statement.
+    stop music fadeout 3.0
+        ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Sat Nov 23 00:11:24 2024
+Mon Nov 25 23:58:22 2024

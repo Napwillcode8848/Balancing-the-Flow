@@ -203,10 +203,10 @@ label start:
         "We're what?!"
         tv "Well, the city is thinking about it."
         "Damn, that really sucks."
+        stop sound fadeout 3.0
+        play music "river_flow.mp3" volume 0.2
         "I love going to the river."
-        stop sound
-        scene bk_river
-        play music "audio/naturemusic.mp3" 
+        scene bk_river 
         "I spent a lot of time there with everyone."
         "Most of it was me just..."
         "Trying to get away from life by canoeing or hanging out with my friends."
@@ -216,6 +216,7 @@ label start:
         jump phone_talking
 
 label phone_talking:
+    play music "main_theme.mp3" volume 0.5 loop
     scene bk_t_bedroom 
     #Phone conversation starts here
     # nvl_narrator "(⁄ ⁄•⁄ω⁄•⁄ ⁄)   (´｡• ᵕ •｡`) ♡"
@@ -249,6 +250,7 @@ label phone_talking:
     "Alright! No more talking. Let's go exploring!!"
     $ bedroom_status = True
     call screen bd_press
+    stop music fadeout 3.0
    
 screen bd_press:
     #door
@@ -279,11 +281,13 @@ screen bd_press:
 #FIRST NATION SCENE
 label map_fn:
     $ current_room = 'map'
+    play music "waiting.mp3" volume 0.5 fadein 0.5 loop
     scene map_background
     with fade 
     "Right, let's head to the neighborhood first to find more about how the dam affects people."
     call screen map_fn
     jump fn_room
+    stop music fadeout 4.0
 
 screen map_fn:
     #neighborhood
@@ -295,6 +299,7 @@ screen map_fn:
 
 label fn_room:
     $ current_room = "fn_room"
+    play music "sad.mp3" volume 0.5 fadein 0.5
     if (been_fnl) and (been_fnr):
         jump map_en
     elif fn_status:
@@ -361,6 +366,7 @@ default been_fnr = False
 
 #Left arrrow: fn
 label fnl:
+    play music "sad.mp3" volume 0.5 fadein 0.4 loop
     if been_fnl:
         scene fn_bkl
         with fade
@@ -465,6 +471,7 @@ screen fnl_options_right_only:
 
 #Right arrow: fn
 label fnr:
+    play music "sad.mp3" volume 0.5 fadein 0.4 loop
     scene fn_bkr
     $ current_room = "fnr"
     if been_fnr:
@@ -531,6 +538,8 @@ label fnr:
         hide fnafor
         call screen fnr_options
 
+    stop music fadeout 3.0
+
 screen fnr_options:
     #left option
     imagebutton:
@@ -568,10 +577,12 @@ screen fnr_options_left_only:
 #LABORATORY / ENV SCENE
 label map_en:
     $ current_room = 'map_en'
+    play music "main_theme.mp3" volume 0.5 fadein 0.3 loop
     scene map_background
     with fade
     pause 0.4
     jump text_after_first_nations
+    stop music fadeout 5.0
     # with fade
     # p "Right, let's head to the University of Toronto to talk to some experts about the dam."
     # call screen map_lab
@@ -579,6 +590,7 @@ label map_en:
 
 label map_en_continued:
     $ current_room = 'map_en'
+    play music "waiting.mp3" volume 0.5 fadein 0.4 loop
     scene map_background
     p "Right, let's head to the University of Toronto Lab to talk to some experts about the dam."
     call screen map_lab
@@ -611,6 +623,7 @@ screen map_lab:
 
 label lab_reception:
     $ current_room = 'lab_reception'
+    play music "main_theme.mp3" volume 0.5 fadein 0.4
     scene backgroundlabfront
     show lab_rec 
     with dissolve
@@ -636,13 +649,14 @@ label lab_professor_engels:
     $ cons_done = False
     window show
 
+    play sound "door_knocking.mp3"
     "I knock on Professor Engels's door and enter."
 
     "It looks like she is doing an experiment."
     
     efor "Ah hello, come on in. How can I help you today?"
 
-    p "Umm, will you help me explore the benefits of a hydro-electric dam?"
+    p "Umm, will you help me explore the effects of a hydro-electric dam?"
 
     p "There is a proposal to build a new hydro-electric dam on Una river"
 
@@ -661,6 +675,7 @@ label lab_professor_engels:
 label efor_conversation_transition:
     if cons_done == True and pros_done == True:
         $ current_room = 'lab_professor_engels'
+        play music "waiting.mp3" volume 0.5 loop
         scene backgroundlab1
         show efor
         window show
@@ -844,6 +859,7 @@ label lab_reception3:
 
 #POLITICIAN OFFICE
 label map_pol:
+    play music "waiting.mp3" volume 0.5 fadein 0.4
     $ current_room = 'map_pol'
     scene map_background
     p "let's head to mayor to talk to him why he wants the dam."
@@ -861,6 +877,7 @@ screen map_office:
 #Office Scene (Receptionist Interaction)
 label office:
     $ current_room = "office"
+    play music "main_theme.mp3" volume 0.5 fadein 0.4
     scene backgroundofficefront
     with fade
     "I need to meet with the politician, but first, there's a receptionist I need to talk to."
@@ -890,12 +907,12 @@ label office:
 
 label office_wait:
     $ current_room = "office_wait"
+    play music "waiting.mp3" volume 0.5 fadein 0.4
     scene backgroundofficefront
 
     "Now I need to wait until I get to speak with the politician."
 
     # Wait for some time, add suspense with a short pause or change in the environment
-    play music "audio/waiting_music.mp3"
 
     "The office is eerily quiet, with only the faint ticking of a clock on the wall"
 
@@ -920,10 +937,12 @@ label office_wait:
             np "Yeah... Well, no one really wants to listen to us regular folks anyway. Politicians only care about their votes."
 
             jump office_wait_continue
+    stop music fadeout 3.0
 
 label office_wait_continue:
     # Now the player will meet the politician
     $ current_room = "office_wait_continue"
+    play music "main_theme.mp3" volume 0.5 fadein 0.4 loop
     scene backgroundoffice
     show pol with dissolve
     window show
@@ -1019,10 +1038,12 @@ label office_wait_continue:
 
 #TOWNHALL 
 label map_town:
+    play music "waiting.mp3" volume 0.5
     window hide
     $ current_room = 'map'
     scene map_background
     with fade 
+    play sound "townhall_bell.mp3"
     "It's time to vote." with dissolve
     "Go to town hall."
     call screen map_tn
@@ -1094,7 +1115,6 @@ screen yes_checkquiz:
                         textbutton entry action Function(ToggleSelected, entry) text_color color
                     # textbutton entry action [Function(ToggleSelected, entry)]
 
-
 screen no_checkquiz:
     add "bk_townhall.png"
         
@@ -1125,10 +1145,11 @@ screen no_checkquiz:
                         textbutton entry action Function(ToggleSelected, entry) text_color color
                 # textbutton "Check Answers" action [Function(check_answers_no)]
 
-
 # Here are some of the labels for the endings! Just make sure to connect these to the game :)
 label ending_yes_win:
+    play sound "Clapping" volume 0.2
     #dam built
+    play music "main_theme" volume 0.2 fadein 0.4
     show black
     "After learning so much about the consequences of dam construction."
     "I thought it would be for the best if the dam were to be built."
